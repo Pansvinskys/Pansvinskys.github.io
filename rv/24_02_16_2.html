@@ -30,10 +30,8 @@
    var material2=new THREE.MeshDepthMaterial({wireframe:false});
    var esfera=new THREE.Mesh(forma,material);
    var cilindro=new THREE.Mesh(forma2,material2);
-   var torus=new THREE.Mesh(forma3,material2);
-   escena.add(esfera);
-   escena.add(cilindro);
-   escena.add(torus);
+   var torus=new THREE.Mesh(forma3,material);
+   escena.add(esfera,cilindro,torus);
    function render(){
     requestAnimationFrame(render);
     renderer.render(escena,camara);
