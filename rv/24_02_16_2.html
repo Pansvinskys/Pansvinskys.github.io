@@ -23,11 +23,12 @@
    var renderer=new THREE.WebGLRenderer();
    renderer.setSize(window.innerWidth,window.innerHeight);
    document.body.appendChild(renderer.domElement);
-   var forma=new THREE.SphereGeometry(1);
+   var forma=new THREE.SphereGeometry(3);
    var forma2=new THREE.CylinderGeometry(1,1,5);
    var material=new THREE.MeshNormalMaterial({color:0xff0000,wireframe:true});
+   var material2=new THREE.MeshDepthMaterial({color:0xff0000,wireframe:false});
    var esfera=new THREE.Mesh(forma,material);
-   var cilindro=new THREE.Mesh(forma2,material);
+   var cilindro=new THREE.Mesh(forma2,material2);
    escena.add(esfera);
    escena.add(cilindro);
    function render(){
