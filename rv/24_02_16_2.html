@@ -27,7 +27,7 @@
    var forma2=new THREE.CylinderGeometry(1,1,5);
    var forma3=new THREE.TorusGeometry(5,6);
    var material=new THREE.MeshNormalMaterial({color:0xff0000,wireframe:true});
-   var material2=new THREE.MeshDepthMaterial({wireframe:false});
+   var material2=new THREE.MeshDepthMaterial();
    var esfera=new THREE.Mesh(forma,material);
    var cilindro=new THREE.Mesh(forma2,material2);
    var torus=new THREE.Mesh(forma3,material);
