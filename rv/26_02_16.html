@@ -27,7 +27,7 @@
    figura.lineTo(10,40);
    figura.lineTo(40,40);
    figura.lineTo(10,10);
-   var forma=new THREE.ExtrudeGeometry(figura,{amount:10});
+   var forma=new THREE.ExtrudeGeometry(figura,{amount:10},{wireframe:true});
    var malla=new THREE.Mesh(forma);
    escena.add(malla);
    function loop(){
