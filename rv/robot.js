@@ -9,7 +9,7 @@ function setup(){
  esfera1.position.y=2;
  esfera2.position.y=-2;
  var forma=new THREE.Geometry();
- THREE.GeometryUtils.merge(forma,esfera1);
+ THREE.GeometryUtils.merge(forma,cilindro);
  malla=new THREE.Mesh(forma);
  wireframe = new THREE.WireframeHelper( malla, 0x00ff00 );
  escena=new THREE.Scene();
