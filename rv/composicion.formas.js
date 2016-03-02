@@ -13,7 +13,7 @@ function setup(){
  malla=new THREE.Mesh(forma);
  wireframe = new THREE.WireframeHelper( malla, 0x00ff00 );
  escena=new THREE.Scene();
- escena.add(malla);
+ escena.add(malla,wireframe);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
  renderer=new THREE.WebGLRenderer();
