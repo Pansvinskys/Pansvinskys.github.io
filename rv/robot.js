@@ -2,10 +2,10 @@
 function setup(){
  var esferaForma=new THREE.SphereGeometry(1);
  var cilindroForma=new THREE.CylinderGeometry(0.5,0.5,4);
- cilindro.matrix.makeRotationX(Math.PI/2);
  var esfera1=new THREE.Mesh(esferaForma);
  var esfera2=new THREE.Mesh(esferaForma);
  var cilindro=new THREE.Mesh(cilindroForma);
+ cilindro.matrix.makeRotationX(Math.PI/2);
  esfera1.position.y=2;
  esfera2.position.y=-2;
  var forma=new THREE.Geometry();
