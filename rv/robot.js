@@ -20,6 +20,11 @@ function setup(){
  caja.position.y=-1.5;
  cam.applyMatrix(rotation2);
  cam.position.y=-0.1;
+ var cuerpo= new THREE.Geometry();
+ cuerpo.merge(placa);
+ cuerpo.merge(caja);
+ cuerpo.merge(cam);
+ robot=new THREE.Mesh(cuerpo)
  llanta1.applyMatrix(rotation);
  llanta1.position.x=-2;
  llanta1.position.z=2;
@@ -52,7 +57,7 @@ function setup(){
  wcaja= new THREE.WireframeHelper(caja,0x0);
  wcam= new THREE.WireframeHelper(cam,0x0000ff);
  escena=new THREE.Scene();
- escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6,placa,wplaca,caja,wcaja,cam,wcam);
+ escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6,robot);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
  camara.position.y=6;
@@ -70,6 +75,6 @@ requestAnimationFrame(loop);
 renderer.render(escena,camara);
 }
 
-var escena,camara,renderer,malla,wireframe;
+var escena,camara,renderer,robot,wireframe;
 setup();
 loop();
