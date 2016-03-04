@@ -40,7 +40,7 @@ function setup(){
  escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
- camara.position.y=3;
+ camara.position.y=6;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
