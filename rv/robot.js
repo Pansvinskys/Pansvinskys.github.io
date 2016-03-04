@@ -9,6 +9,7 @@ function setup(){
  var llanta6=new THREE.Mesh(llantaForma,material);
  var rotation = new THREE.Matrix4().makeRotationX(Math.PI/2);
  llanta1.applyMatrix(rotation);
+ llanta1.position.x=-2;
  llanta2.applyMatrix(rotation);
  llanta3.applyMatrix(rotation);
  llanta4.applyMatrix(rotation);
@@ -21,7 +22,7 @@ function setup(){
  wllanta5 = new THREE.WireframeHelper( llanta5, 0x7f0000 );
  wllanta6 = new THREE.WireframeHelper( llanta6, 0x7f0000 );
  escena=new THREE.Scene();
- escena.add(llanta1,wllanta1);
+ escena.add(llanta1,wllanta1,llanta2,wllanta2);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
  renderer=new THREE.WebGLRenderer();
