@@ -6,8 +6,6 @@ function setup(){
  var esfera2=new THREE.Mesh(esferaForma);
  var cilindro=new THREE.Mesh(cilindroForma);
  cilindro.rotation.y=Math.pi/2;
- esfera1.position.y=2;
- esfera2.position.y=-2;
  var forma=new THREE.Geometry();
  THREE.GeometryUtils.merge(forma,cilindro);
  malla=new THREE.Mesh(forma);
