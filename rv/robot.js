@@ -1,7 +1,7 @@
 function setup(){
  var llantaForma=new THREE.CylinderGeometry(0.5,0.5,1);
  var material=new THREE.MeshBasicMaterial({color:0x0f0f0f});
- var material2=new THREE.MeshBasicMaterial({color:0xf0f0f0});
+ var material2=new THREE.MeshBasicMaterial({color:0xa0a0a0});
  var placaForma=new THREE.BoxGeometry(6,0.5,4);
  var placa=new THREE.Mesh(placaForma,material2);
  var llanta1=new THREE.Mesh(llantaForma,material);
@@ -39,8 +39,9 @@ function setup(){
  wllanta4 = new THREE.WireframeHelper( llanta4, 0x7f0000 );
  wllanta5 = new THREE.WireframeHelper( llanta5, 0x7f0000 );
  wllanta6 = new THREE.WireframeHelper( llanta6, 0x7f0000 );
+ wplaca = new THREE.WireframeHelper( placa, 0x0 );
  escena=new THREE.Scene();
- escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6,placa);
+ escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6,placa,wplaca);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
  camara.position.y=6;
