@@ -1,6 +1,7 @@
 function setup(){
  var cilindroForma=new THREE.CylinderGeometry(0.5,0.5,4);
- var cilindro=new THREE.MeshBasicMaterial(cilindroForma,{color:0x0f0f0f});
+ var material=new THREE.MeshBasicMaterial({color:0x0f0f0f});
+ var cilindro=new THREE.Mesh(cilindroForma,material);
  var rotation = new THREE.Matrix4().makeRotationX((7*Math.PI)/12);
  cilindro.applyMatrix(rotation);
  var forma=new THREE.Geometry();
