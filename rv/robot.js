@@ -14,7 +14,7 @@ function setup(){
  var llanta6=new THREE.Mesh(llantaForma,material);
  var rotation = new THREE.Matrix4().makeRotationX(Math.PI/2);
  placa.position.y=-2.5;
- caja.position.y=-2;
+ caja.position.y=-1.5;
  llanta1.applyMatrix(rotation);
  llanta1.position.x=-2;
  llanta1.position.z=2;
