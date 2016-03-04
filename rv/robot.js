@@ -24,7 +24,7 @@ function setup(){
  escena.add(llanta1,wllanta1);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
- camara.rotateOnAxis(new THREE.Vector3(0, 1, 0),-10*(Math.Pi/180));
+ camara.rotateOnAxis(new THREE.Vector3(0, 0, 1),-10*(Math.Pi/180));
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
