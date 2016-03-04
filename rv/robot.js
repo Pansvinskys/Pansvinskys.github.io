@@ -71,6 +71,12 @@ camara.position.z = Math.sin( timer ) * 10;
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
+llanta1.rotation.z+=0.1;
+llanta2.rotation.z+=0.1;
+llanta3.rotation.z+=0.1;
+llanta4.rotation.z+=0.1;
+llanta5.rotation.z+=0.1;
+llanta6.rotation.z+=0.1;
 }
 
 var escena,camara,renderer,robot;
