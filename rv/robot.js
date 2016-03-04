@@ -43,8 +43,9 @@ function setup(){
  wllanta5 = new THREE.WireframeHelper( llanta5, 0x7f0000 );
  wllanta6 = new THREE.WireframeHelper( llanta6, 0x7f0000 );
  wplaca = new THREE.WireframeHelper( placa, 0x0 );
+ wcaja= new THREE.WireframeHelper(caja,0x0);
  escena=new THREE.Scene();
- escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6,placa,wplaca);
+ escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6,placa,wplaca,caja,wcaja);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
  camara.position.y=6;
