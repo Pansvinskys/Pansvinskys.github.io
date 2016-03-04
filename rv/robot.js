@@ -11,7 +11,7 @@ function setup(){
  THREE.GeometryUtils.merge(forma,cilindro);
  malla=new THREE.Mesh(forma);
  malla.matrix.makeRotationY(Math.PI/2);
- wireframe = new THREE.WireframeHelper( malla, 0xff0000 );
+ wireframe = new THREE.WireframeHelper( malla, 0x00ff00 );
  escena=new THREE.Scene();
  escena.add(malla,wireframe);
  camara=new THREE.PerspectiveCamera();
