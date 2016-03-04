@@ -31,8 +31,8 @@ function setup(){
 
 function loop(){
  var timer = Date.now() * 0.0002;
- camera.position.x = Math.cos( timer ) * 1500;
-	camera.position.z = Math.sin( timer ) * 1500;
+ camara.position.x = Math.cos( timer ) * 1500;
+	camara.position.z = Math.sin( timer ) * 1500;
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 }
