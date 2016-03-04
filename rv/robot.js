@@ -1,9 +1,6 @@
 
 function setup(){
- var esferaForma=new THREE.SphereGeometry(1);
  var cilindroForma=new THREE.CylinderGeometry(0.5,0.5,4);
- var esfera1=new THREE.Mesh(esferaForma);
- var esfera2=new THREE.Mesh(esferaForma);
  var cilindro=new THREE.Mesh(cilindroForma);
  cilindro.rotation.y=Math.pi/2;
  var forma=new THREE.Geometry();
