@@ -4,12 +4,9 @@ function setup(){
  var cilindro=new THREE.Mesh(cilindroForma,material);
  var rotation = new THREE.Matrix4().makeRotationX((7*Math.PI)/12);
  cilindro.applyMatrix(rotation);
- var forma=new THREE.Geometry();
- THREE.GeometryUtils.merge(forma,cilindro);
- malla=new THREE.Mesh(forma);
  wireframe = new THREE.WireframeHelper( malla, 0x0000ff );
  escena=new THREE.Scene();
- escena.add(malla,wireframe);
+ escena.add(cilindro,wireframe);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
  renderer=new THREE.WebGLRenderer();
