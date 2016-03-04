@@ -18,7 +18,6 @@ function setup(){
  var rotation2= new THREE.Matrix4().makeRotationY(Math.PI/2);
  placa.position.y=-2.5;
  caja.position.y=-1.5;
- cam.applyMatrix(rotation);
  cam.applyMatrix(rotation2);
  llanta1.applyMatrix(rotation);
  llanta1.position.x=-2;
