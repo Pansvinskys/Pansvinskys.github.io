@@ -2,7 +2,7 @@
 function setup(){
  var cilindroForma=new THREE.CylinderGeometry(0.5,0.5,4);
  var cilindro=new THREE.Mesh(cilindroForma);
- var rotation = new THREE.Matrix4().makeRotationX((5*Math.PI)/4);
+ var rotation = new THREE.Matrix4().makeRotationX((5*Math.PI)/12);
  cilindro.applyMatrix(rotation);
  var forma=new THREE.Geometry();
  THREE.GeometryUtils.merge(forma,cilindro);
