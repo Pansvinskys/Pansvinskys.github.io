@@ -31,7 +31,7 @@ function setup(){
 
 function loop(){
 camara.position.z+=.01;	
-camara.position.x+=.01;	
+camara.position.x+=.1;	
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 }
