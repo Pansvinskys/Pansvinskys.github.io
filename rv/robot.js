@@ -2,6 +2,8 @@
 function setup(){
  var cilindroForma=new THREE.CylinderGeometry(0.5,0.5,4);
  var cilindro=new THREE.Mesh(cilindroForma);
+ var rotation = new THREE.Matrix4().makeRotationY(Math.PI/2);
+ cilindro.applyMatrix(transformation);
  var forma=new THREE.Geometry();
  THREE.GeometryUtils.merge(forma,cilindro);
  malla=new THREE.Mesh(forma);
