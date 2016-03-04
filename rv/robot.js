@@ -1,7 +1,7 @@
 function setup(){
  var llantaForma=new THREE.CylinderGeometry(0.5,0.5,1);
  var material=new THREE.MeshBasicMaterial({color:0x0f0f0f});
- var material=new THREE.MeshBasicMaterial({color:0xf0f0f0});
+ var material2=new THREE.MeshBasicMaterial({color:0xf0f0f0});
  var placaForma=new THREE.BoxGeometry(6,0.5,4);
  var placa=new THREE.Mesh(placaForma,material2);
  var llanta1=new THREE.Mesh(llantaForma,material);
