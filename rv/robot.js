@@ -19,8 +19,7 @@ function setup(){
  placa.position.y=-2.5;
  caja.position.y=-1.5;
  cam.applyMatrix(rotation2);
- cam.position.y=-1.5;
- cam.position.x=.3;
+ cam.position.y=-0.1;
  llanta1.applyMatrix(rotation);
  llanta1.position.x=-2;
  llanta1.position.z=2;
