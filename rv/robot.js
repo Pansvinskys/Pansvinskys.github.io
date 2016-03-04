@@ -18,7 +18,6 @@ function setup(){
 function loop(){
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
-cilindro.rotation.y=Math.pi/2;
 }
 
 var escena,camara,renderer,malla,wireframe;
