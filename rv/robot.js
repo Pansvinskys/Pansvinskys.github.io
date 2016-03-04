@@ -24,7 +24,7 @@ function setup(){
  THREE.GeometryUtils.merge(cuerpo,placa);
  THREE.GeometryUtils.merge(cuerpo,caja);
  THREE.GeometryUtils.merge(cuerpo,cam);
- robot=new THREE.Mesh(cuerpo)
+ robot=new THREE.Mesh(cuerpo,material2)
  llanta1.applyMatrix(rotation);
  llanta1.position.x=-2;
  llanta1.position.z=2;
@@ -53,11 +53,9 @@ function setup(){
  wllanta4 = new THREE.WireframeHelper( llanta4, 0x7f0000 );
  wllanta5 = new THREE.WireframeHelper( llanta5, 0x7f0000 );
  wllanta6 = new THREE.WireframeHelper( llanta6, 0x7f0000 );
- wplaca = new THREE.WireframeHelper( placa, 0x0 );
- wcaja= new THREE.WireframeHelper(caja,0x0);
- wcam= new THREE.WireframeHelper(cam,0x0000ff);
+ wrobot = new THREE.WireframeHelper( robot, 0x0 );
  escena=new THREE.Scene();
- escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6,robot);
+ escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6,robot,wrobot);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
  camara.position.y=6;
@@ -75,6 +73,6 @@ requestAnimationFrame(loop);
 renderer.render(escena,camara);
 }
 
-var escena,camara,renderer,robot,wireframe;
+var escena,camara,renderer,robot;
 setup();
 loop();
