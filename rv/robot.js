@@ -8,12 +8,12 @@ function setup(){
  var caja=new THREE.Mesh(cajaForma,material2);
  var placa=new THREE.Mesh(placaForma,material2);
  var cam=new THREE.Mesh(camForma,material);
- var llanta1=new THREE.Mesh(llantaForma,material);
- var llanta2=new THREE.Mesh(llantaForma,material);
- var llanta3=new THREE.Mesh(llantaForma,material);
- var llanta4=new THREE.Mesh(llantaForma,material);
- var llanta5=new THREE.Mesh(llantaForma,material);
- var llanta6=new THREE.Mesh(llantaForma,material);
+  llanta1=new THREE.Mesh(llantaForma,material);
+  llanta2=new THREE.Mesh(llantaForma,material);
+  llanta3=new THREE.Mesh(llantaForma,material);
+  llanta4=new THREE.Mesh(llantaForma,material);
+  llanta5=new THREE.Mesh(llantaForma,material);
+  llanta6=new THREE.Mesh(llantaForma,material);
  var rotation = new THREE.Matrix4().makeRotationX(Math.PI/2);
  var rotation2= new THREE.Matrix4().makeRotationZ(Math.PI/2);
  placa.position.y=-2.5;
@@ -79,6 +79,6 @@ llanta5.rotation.z+=0.1;
 llanta6.rotation.z+=0.1;
 }
 
-var escena,camara,renderer,robot;
+var escena,camara,renderer,robot,llanta1,llanta2,llanta3,llanta4,llanta5,llanta6;
 setup();
 loop();
