@@ -12,6 +12,7 @@ function setup(){
  escena.add(malla,wireframe);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
+ camara.rotation.x=Math.pi/4;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
