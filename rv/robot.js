@@ -3,7 +3,7 @@ function setup(){
  var material=new THREE.MeshBasicMaterial({color:0x0f0f0f});
  var material2=new THREE.MeshBasicMaterial({color:0xb0b0b0});
  var placaForma=new THREE.BoxGeometry(6,0.5,4);
- var cajaForma=new THREE.BoxGeometry(2,2,4);
+ var cajaForma=new THREE.BoxGeometry(2,2,2);
  var caja=new THREE.Mesh(cajaForma,material2);
  var placa=new THREE.Mesh(placaForma,material2);
  var llanta1=new THREE.Mesh(llantaForma,material);
@@ -14,6 +14,7 @@ function setup(){
  var llanta6=new THREE.Mesh(llantaForma,material);
  var rotation = new THREE.Matrix4().makeRotationX(Math.PI/2);
  placa.position.y=-2.5;
+ caja.position.y=-2;
  llanta1.applyMatrix(rotation);
  llanta1.position.x=-2;
  llanta1.position.z=2;
