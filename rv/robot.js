@@ -30,7 +30,8 @@ function setup(){
 }
 
 function loop(){
-camara.position.z+=1;	
+camara.position.z+=.01;	
+camara.position.x+=.01;	
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 }
