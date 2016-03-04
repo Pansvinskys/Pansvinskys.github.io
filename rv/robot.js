@@ -2,7 +2,7 @@
 function setup(){
  var cilindroForma=new THREE.CylinderGeometry(0.5,0.5,4);
  var cilindro=new THREE.Mesh(cilindroForma);
- var rotation = new THREE.Matrix4().makeRotationX(Math.PI/2);
+ var rotation = new THREE.Matrix4().makeRotationX(Math.PI/4);
  cilindro.applyMatrix(rotation);
  var forma=new THREE.Geometry();
  THREE.GeometryUtils.merge(forma,cilindro);
@@ -12,7 +12,6 @@ function setup(){
  escena.add(malla,wireframe);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=50;
- camara.rotation.x=Math.PI/4;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
