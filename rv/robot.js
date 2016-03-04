@@ -12,9 +12,15 @@ function setup(){
  llanta1.position.x=-2;
  llanta2.applyMatrix(rotation);
  llanta3.applyMatrix(rotation);
+ llanta3.position.x=2;
  llanta4.applyMatrix(rotation);
+ llanta4.position.x=-2;
+ llanta4.position.z=-2;
  llanta5.applyMatrix(rotation);
+ llanta4.position.z=-2;
  llanta6.applyMatrix(rotation);
+ llanta4.position.x=2;
+ llanta4.position.z=-2;
  wllanta1 = new THREE.WireframeHelper( llanta1, 0x7f0000 );
  wllanta2 = new THREE.WireframeHelper( llanta2, 0x7f0000 );
  wllanta3 = new THREE.WireframeHelper( llanta3, 0x7f0000 );
