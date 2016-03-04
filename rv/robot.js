@@ -21,9 +21,9 @@ function setup(){
  cam.applyMatrix(rotation2);
  cam.position.y=-0.1;
  var cuerpo= new THREE.Geometry();
- cuerpo.merge(placa);
- cuerpo.merge(caja);
- cuerpo.merge(cam);
+ THREE.GeometryUtils.merge(cuerpo,esfera1);
+ THREE.GeometryUtils.merge(cuerpo,esfera2);
+ THREE.GeometryUtils.merge(cuerpo,cilindro);
  robot=new THREE.Mesh(cuerpo)
  llanta1.applyMatrix(rotation);
  llanta1.position.x=-2;
