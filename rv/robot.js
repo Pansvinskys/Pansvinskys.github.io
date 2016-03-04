@@ -24,13 +24,15 @@ function setup(){
  escena.add(llanta1,wllanta1);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
- camara.rotateOnAxis(new THREE.Vector3(-1, 0, 0),10*(Math.pi/180));
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
 }
 
 function loop(){
+ var timer = Date.now() * 0.0002;
+ camera.position.x = Math.cos( timer ) * 1500;
+	camera.position.z = Math.sin( timer ) * 1500;
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 }
