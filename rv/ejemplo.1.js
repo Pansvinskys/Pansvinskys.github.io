@@ -30,8 +30,8 @@ document.body.appendChild(renderer.domElement);
 
 function loop(){
 var timer = Date.now() * 0.0002;
-camara.position.x = (Math.cos( timer ) * 10)+40;
-camara.position.z = (Math.sin( timer ) * 10)+40;
+camara.position.x = (Math.cos( timer ) * 30);
+camara.position.z = (Math.sin( timer ) * 30);
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
