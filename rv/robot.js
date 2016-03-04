@@ -4,7 +4,7 @@ function setup(){
  var cilindro=new THREE.Mesh(cilindroForma,material);
  var rotation = new THREE.Matrix4().makeRotationX((7*Math.PI)/12);
  cilindro.applyMatrix(rotation);
- wireframe = new THREE.WireframeHelper( malla, 0x0000ff );
+ wireframe = new THREE.WireframeHelper( cilindro, 0x0000ff );
  escena=new THREE.Scene();
  escena.add(cilindro,wireframe);
  camara=new THREE.PerspectiveCamera();
