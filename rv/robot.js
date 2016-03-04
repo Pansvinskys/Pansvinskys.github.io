@@ -33,7 +33,7 @@ function loop(){
 var timer = Date.now() * 0.0002;
 camara.position.x = Math.cos( timer ) * 10;
 camara.position.z = Math.sin( timer ) * 10;
-camara.lookAt( scene.position );
+camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 }
