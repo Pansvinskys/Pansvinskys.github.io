@@ -4,8 +4,10 @@ function setup(){
  var material2=new THREE.MeshBasicMaterial({color:0xb0b0b0});
  var placaForma=new THREE.BoxGeometry(6,0.5,4);
  var cajaForma=new THREE.BoxGeometry(2,2,2);
+ var camForma=new THREE.CylinderGeometry(0.5,0.5,1);
  var caja=new THREE.Mesh(cajaForma,material2);
  var placa=new THREE.Mesh(placaForma,material2);
+ var cam=new THREE.Mesh(camForma,material);
  var llanta1=new THREE.Mesh(llantaForma,material);
  var llanta2=new THREE.Mesh(llantaForma,material);
  var llanta3=new THREE.Mesh(llantaForma,material);
@@ -13,8 +15,11 @@ function setup(){
  var llanta5=new THREE.Mesh(llantaForma,material);
  var llanta6=new THREE.Mesh(llantaForma,material);
  var rotation = new THREE.Matrix4().makeRotationX(Math.PI/2);
+ var rotation2= new THREE.Matrix4().makeRotationY(Math.PI/2);
  placa.position.y=-2.5;
  caja.position.y=-1.5;
+ cam.applyMatrix(rotation);
+ cam.applyMatrix(rotation2);
  llanta1.applyMatrix(rotation);
  llanta1.position.x=-2;
  llanta1.position.z=2;
@@ -45,8 +50,9 @@ function setup(){
  wllanta6 = new THREE.WireframeHelper( llanta6, 0x7f0000 );
  wplaca = new THREE.WireframeHelper( placa, 0x0 );
  wcaja= new THREE.WireframeHelper(caja,0x0);
+ wcam= new THREE.WireframeHelper(cam,0x0000ff);
  escena=new THREE.Scene();
- escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6,placa,wplaca,caja,wcaja);
+ escena.add(llanta1,wllanta1,llanta2,wllanta2,llanta3,wllanta3,llanta4,wllanta4,llanta5,wllanta5,llanta6,wllanta6,placa,wplaca,caja,wcaja,cam,wcam);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
  camara.position.y=6;
