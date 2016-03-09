@@ -16,9 +16,13 @@ function setup(){
 }
 
 function loop(){
+ var timer = Date.now() * 0.0002;
+ camara.position.x = Math.cos( timer ) * 10;
+ camara.position.z = Math.sin( timer ) * 10;
+ camara.lookAt( escena.position );
  requestAnimationFrame(loop);
- malla.rotation.x+=0.01;
- malla.rotation.y+=0.01;
+ malla.rotation.x+=0.001;
+ malla.rotation.y+=0.001;
  renderer.render(escena,camara);
 }
 
