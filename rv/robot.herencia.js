@@ -11,7 +11,8 @@ function llanta(xp,yp,zp,angx,angy,angz){
  this.llanta.applyMatrix(roty);
  this.llanta.applyMatrix(rotz);
  this.wllanta=new THREE.WireframeHelper(this.llanta,0x7f0000);
- this.add(this.llanta,this.wllanta);
+ this.add(this.llanta);
+ this.add(this.wllanta);
 }
 
 function cuerpo(){
@@ -24,7 +25,9 @@ function cuerpo(){
  this.caja.position.y=-1.5;
  this.cam.applyMatrix(rotcam);
  this.cam.position.y=-0.1;
- this.add(this.placa,this.caja,this.cam);
+ this.add(this.placa);
+ this.add(this.caja);
+ this.add(this.cam);
 }
 
 function robot(){
