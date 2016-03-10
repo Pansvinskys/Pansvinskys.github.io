@@ -31,6 +31,7 @@ function Cuerpo(){
 }
 
 function Robot(){
+ THREE.Object3D.call(this);
  this.llanta1=new Llanta(-2,2,-3,Math.PI/2,0,0);
  this.llanta2=new Llanta(0,-3,2,Math.PI/2,0,0);
  this.llanta3=new Llanta(2,2,-3,Math.PI/2,0,0);
