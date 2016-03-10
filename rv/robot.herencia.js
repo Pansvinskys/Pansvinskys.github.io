@@ -47,6 +47,7 @@ function Robot(){
 
 Llanta.prototype=new THREE.Object3D();
 Cuerpo.prototype=new THREE.Object3D();
+Robot.prototype=new THREE.Object3D();
 
 function setup(){
  rob=new Robot();
