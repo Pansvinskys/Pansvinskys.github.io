@@ -20,16 +20,15 @@ function Cuerpo(){
  THREE.Object3D.call(this);
  this.placa=new THREE.Mesh(new THREE.BoxGeometry(6,0.5,4),new THREE.MeshPhongMaterial({color:0xb0b0b0}));
  this.caja=new THREE.Mesh(new THREE.BoxGeometry(2,2,2),new THREE.MeshPhongMaterial({color:0xb0b0b0}));
- this.cam=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshBasicMaterial({color:0x0f0f0f}));
+ this.cam=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshLambertMaterial({color:0x3f3f3f}));
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
  this.placa.position.y=-2.5;
  this.caja.position.y=-1.1;
  this.cam.applyMatrix(rotcam);
  this.cam.position.y=0.3;
- this.wcam=new THREE.WireframeHelper(this.cam,0xffffff);
  this.add(this.placa);
  this.add(this.caja);
- this.add(this.cam,this.wcam);
+ this.add(this.cam);
 }
 
 function Robot(){
