@@ -48,7 +48,7 @@ Llanta.prototype=new THREE.Object3D();
 Cuerpo.prototype=new THREE.Object3D();
 
 function setup(){
- rob=new Cuerpo();
+ rob=new Llanta(-2,2,-3,Math.PI/2,0,0);
  escena=new THREE.Scene();
  escena.add(rob);
  camara=new THREE.PerspectiveCamera();
