@@ -42,9 +42,9 @@ llanta.prototype=new THREE.Object3D();
 cuerpo.prototype=new THREE.Object3D();
 
 function setup(){
- rob=new robot();
+ //rob=new robot();
  escena=new THREE.Scene();
- escena.add(rob);
+ escena.add();
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
  camara.position.y=6;
