@@ -7,8 +7,8 @@ function Llanta(angx,angy,angz){
  this.llanta.applyMatrix(rotx);
  this.llanta.applyMatrix(roty);
  this.llanta.applyMatrix(rotz);
- this.wllanta=new WireframeHelper(this.llanta,0xff0000);
- this.add(this.llanta);
+ this.wllanta=new THREE.WireframeHelper(this.llanta,0xff0000);
+ this.add(this.llanta,this.wllanta);
 }
 
 function posicionLlanta(cosa,xp,yp,zp){
