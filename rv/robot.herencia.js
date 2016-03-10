@@ -25,9 +25,12 @@ function Cuerpo(){
  this.caja.position.y=-1.5;
  this.cam.applyMatrix(rotcam);
  this.cam.position.y=-0.1;
- this.add(this.placa);
- this.add(this.caja);
- this.add(this.cam);
+ this.wplaca=new THREE.WireframeHelper(this.placa,0xffffff);
+ this.wcaja=new THREE.WireframeHelper(this.caja,0xffffff);
+ this.wcam=new THREE.WireframeHelper(this.cam,0xffffff);
+ this.add(this.placa,this.wplaca);
+ this.add(this.caja,this.wcaja);
+ this.add(this.cam,this.wcam);
 }
 
 function Robot(){
@@ -39,9 +42,8 @@ function Robot(){
  this.llanta5=new Llanta(0,-3,-2,Math.PI/2,0,0);
  this.llanta6=new Llanta(2,-3,-2,Math.PI/2,0,0);
  this.cuerpobot=new Cuerpo();
- this.wrobot=new THREE.WireframeHelper(this.cuerpobot,0x0);
  this.add(this.llanta1);
- this.add(this.cuerpobot,this.wrobot);
+ this.add(this.cuerpobot);
  //this.add(this.llanta3,this.llanta4,this.llanta5,this.llanta6,this.cuerpobot,this.wrobot);
 }
 
