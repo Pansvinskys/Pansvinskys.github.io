@@ -7,6 +7,7 @@ function Llanta(angx,angy,angz){
  this.llanta.applyMatrix(rotx);
  this.llanta.applyMatrix(roty);
  this.llanta.applyMatrix(rotz);
+ this.wllanta=new WireframeHelper(this.llanta,0xff0000);
  this.add(this.llanta);
 }
 
@@ -48,15 +49,8 @@ function Robot(){
  posicionLlanta(this.llanta4,-2,-3,-2);
  posicionLlanta(this.llanta5,0,-3,-2);
  posicionLlanta(this.llanta6,2,-3,-2);
- this.wllanta1=new THREE.WireframeHelper(this.llanta1,0x7f0000);
- this.wllanta2=new THREE.WireframeHelper(this.llanta2,0x7f0000);
- this.wllanta3=new THREE.WireframeHelper(this.llanta3,0x7f0000);
- this.wllanta4=new THREE.WireframeHelper(this.llanta4,0x7f0000);
- this.wllanta5=new THREE.WireframeHelper(this.llanta5,0x7f0000);
- this.wllanta6=new THREE.WireframeHelper(this.llanta6,0x7f0000);
  this.cuerpobot=new Cuerpo();
  this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4,this.llanta5,this.llanta6);
- this.add(this.wllanta1,this.wllanta2,this.wllanta3,this.wllanta4,this.wllanta5,this.wllanta6);
  this.add(this.cuerpobot);
 }
 
