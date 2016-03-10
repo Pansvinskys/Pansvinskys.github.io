@@ -41,7 +41,7 @@ function Robot(){
  this.cuerpobot=new Cuerpo();
  this.wrobot=new THREE.WireframeHelper(this.cuerpobot,0x0);
  this.add(this.llanta1);
- this.add(this.cuerpobot);
+ this.add(this.cuerpobot,this.wrobot);
  //this.add(this.llanta3,this.llanta4,this.llanta5,this.llanta6,this.cuerpobot,this.wrobot);
 }
 
