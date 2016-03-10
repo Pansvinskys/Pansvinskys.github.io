@@ -56,7 +56,7 @@ function Robot(){
  this.wllanta6=new THREE.WireframeHelper(this.llanta6,0x7f0000);
  this.cuerpobot=new Cuerpo();
  this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4,this.llanta5,this.llanta6);
- this.add(this.wllanta1,this.wllanta2,this.wllanta3,this.wllanta4,this.wllanta5,this.wllanta6)
+ this.add(this.wllanta1,this.wllanta2,this.wllanta3,this.wllanta4,this.wllanta5,this.wllanta6);
  this.add(this.cuerpobot);
 }
 
