@@ -1,14 +1,13 @@
 function Llanta(angx,angy,angz){
  THREE.Object3D.call(this);
- this.llanta=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshBasicMaterial({color:0x0f0f0f}));
+ this.llanta=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshBasicMaterial({color:0x0f0f0f,wireframe:true}));
  var rotx=new THREE.Matrix4().makeRotationX(angx);
  var roty=new THREE.Matrix4().makeRotationY(angy);
  var rotz=new THREE.Matrix4().makeRotationZ(angz);
  this.llanta.applyMatrix(rotx);
  this.llanta.applyMatrix(roty);
  this.llanta.applyMatrix(rotz);
- this.wllanta=new THREE.WireframeHelper(this.llanta,0xff0000);
- this.add(this.llanta,this.wllanta);
+ this.add(this.llanta);
 }
 
 function posicionLlanta(cosa,xp,yp,zp){
