@@ -31,8 +31,6 @@ function Cuerpo(){
 }
 
 function Robot(){
- Llanta.call(this);
- Cuerpo.call(this);
  this.llanta1=new Llanta(-2,2,-3,Math.PI/2,0,0);
  this.llanta2=new Llanta(0,-3,2,Math.PI/2,0,0);
  this.llanta3=new Llanta(2,2,-3,Math.PI/2,0,0);
@@ -48,7 +46,7 @@ Llanta.prototype=new THREE.Object3D();
 Cuerpo.prototype=new THREE.Object3D();
 
 function setup(){
- rob=new Llanta(-2,2,-3,Math.PI/2,0,0);
+ rob=new Robot;
  escena=new THREE.Scene();
  escena.add(rob);
  camara=new THREE.PerspectiveCamera();
