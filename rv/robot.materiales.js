@@ -58,7 +58,7 @@ Cuerpo.prototype=new THREE.Object3D();
 Robot.prototype=new THREE.Object3D();
 
 function setup(){
- var luzPuntual=new THREE.PointLight(0xCC00CC);
+ var luzPuntual=new THREE.PointLight(0xffffff);
  luzPuntual.position.x=10;
  luzPuntual.position.y=10;
  luzPuntual.position.z=10;
