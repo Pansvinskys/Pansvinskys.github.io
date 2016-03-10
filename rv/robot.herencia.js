@@ -1,9 +1,6 @@
-function Llanta(xp,yp,zp,angx,angy,angz){
+function Llanta(angx,angy,angz){
  THREE.Object3D.call(this);
  this.llanta=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshBasicMaterial({color:0x0f0f0f}));
- this.llanta.position.x=xp;
- this.llanta.position.y=yp;
- this.llanta.position.z=zp;
  var rotx=new THREE.Matrix4().makeRotationX(angx);
  var roty=new THREE.Matrix4().makeRotationY(angy);
  var rotz=new THREE.Matrix4().makeRotationZ(angz);
@@ -13,6 +10,12 @@ function Llanta(xp,yp,zp,angx,angy,angz){
  this.wllanta=new THREE.WireframeHelper(this.llanta,0x7f0000);
  this.add(this.llanta);
  this.add(this.wllanta);
+}
+
+function posicionLlanta(cosa,xp,yp,zpy){
+ cosa.position.x=xp;
+ cosa.position.y=yp;
+ cosa.position.z=zp;
 }
 
 function Cuerpo(){
@@ -25,8 +28,8 @@ function Cuerpo(){
  this.caja.position.y=-1.5;
  this.cam.applyMatrix(rotcam);
  this.cam.position.y=-0.1;
- this.wplaca=new THREE.WireframeHelper(this.placa,0xffffff);
- this.wcaja=new THREE.WireframeHelper(this.caja,0xffffff);
+ this.wplaca=new THREE.WireframeHelper(this.placa,0x0);
+ this.wcaja=new THREE.WireframeHelper(this.caja,0x0);
  this.wcam=new THREE.WireframeHelper(this.cam,0xffffff);
  this.add(this.placa,this.wplaca);
  this.add(this.caja,this.wcaja);
@@ -35,12 +38,18 @@ function Cuerpo(){
 
 function Robot(){
  THREE.Object3D.call(this);
- this.llanta1=new Llanta(-2,2,-3,Math.PI/2,0,0);
- this.llanta2=new Llanta(0,-3,2,Math.PI/2,0,0);
- this.llanta3=new Llanta(2,2,-3,Math.PI/2,0,0);
- this.llanta4=new Llanta(-2,-2,-3,Math.PI/2,0,0);
- this.llanta5=new Llanta(0,-3,-2,Math.PI/2,0,0);
- this.llanta6=new Llanta(2,-3,-2,Math.PI/2,0,0);
+ this.llanta1=new Llanta(Math.PI/2,0,0);
+ this.llanta2=new Llanta(Math.PI/2,0,0);
+ this.llanta3=new Llanta(Math.PI/2,0,0);
+ this.llanta4=new Llanta(Math.PI/2,0,0);
+ this.llanta5=new Llanta(Math.PI/2,0,0);
+ this.llanta6=new Llanta(Math.PI/2,0,0);
+ posicionLlanta(this.llanta1,-2,-3,2);
+ posicionLlanta(this.llanta2,0,-3,2);
+ posicionLlanta(this.llanta3,2,-3,2);
+ posicionLlanta(this.llanta4,-2,-3,-2);
+ posicionLlanta(this.llanta5,0,-3,-2);
+ posicionLlanta(this.llanta6,2,-3,-2);
  this.cuerpobot=new Cuerpo();
  this.add(this.llanta1);
  this.add(this.cuerpobot);
