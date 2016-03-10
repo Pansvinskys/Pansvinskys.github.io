@@ -26,9 +26,10 @@ function Cuerpo(){
  this.caja.position.y=-1.1;
  this.cam.applyMatrix(rotcam);
  this.cam.position.y=0.3;
+ this.wcam=new THREE.WireframeHelper(this.cam,0xffffff);
  this.add(this.placa);
  this.add(this.caja);
- this.add(this.cam);
+ this.add(this.cam,this.wcam);
 }
 
 function Robot(){
