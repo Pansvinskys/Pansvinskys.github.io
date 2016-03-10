@@ -32,6 +32,7 @@ function cuerpo(){
 
 function robot(){
  llanta.call(this);
+ cuerpo.call(this);
  this.llanta1=new llanta(-2,2,-3,Math.PI/2,0,0);
  this.llanta2=new llanta(0,-3,2,Math.PI/2,0,0);
  this.llanta3=new llanta(2,2,-3,Math.PI/2,0,0);
@@ -40,6 +41,7 @@ function robot(){
  this.llanta6=new llanta(2,-3,-2,Math.PI/2,0,0);
  this.cuerpobot=new cuerpo();
  this.wrobot=new THREE.WireframeHelper(this.cuerpobot,0x0);
+ this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4,this.llanta5,this.llanta6,this.cuerpobot,this.wrobot);
 }
 
 llanta.prototype=new THREE.Object3D();
@@ -48,7 +50,7 @@ cuerpo.prototype=new THREE.Object3D();
 function setup(){
  rob=new llanta();
  escena=new THREE.Scene();
- escena.add(cuerpo);
+ escena.add(rob);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=10;
  camara.position.y=6;
