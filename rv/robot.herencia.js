@@ -12,7 +12,7 @@ function Llanta(angx,angy,angz){
  this.add(this.wllanta);
 }
 
-function posicionLlanta(cosa,xp,yp,zpy){
+function posicionLlanta(cosa,xp,yp,zp){
  cosa.position.x=xp;
  cosa.position.y=yp;
  cosa.position.z=zp;
