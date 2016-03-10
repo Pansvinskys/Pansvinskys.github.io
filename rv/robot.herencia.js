@@ -39,7 +39,9 @@ function Robot(){
  this.llanta6=new Llanta(2,-3,-2,Math.PI/2,0,0);
  this.cuerpobot=new Cuerpo();
  this.wrobot=new THREE.WireframeHelper(this.cuerpobot,0x0);
- this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4,this.llanta5,this.llanta6,this.cuerpobot,this.wrobot);
+ this.add(this.llanta1);
+ this.add(this.llanta2);
+ this.add(this.llanta3,this.llanta4,this.llanta5,this.llanta6,this.cuerpobot,this.wrobot);
 }
 
 Llanta.prototype=new THREE.Object3D();
