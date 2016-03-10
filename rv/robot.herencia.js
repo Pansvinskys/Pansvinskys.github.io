@@ -1,6 +1,6 @@
 function Llanta(angx,angy,angz){
  THREE.Object3D.call(this);
- this.llanta=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshBasicMaterial({color:0x0f0f0f,wireframe:true}));
+ this.llanta=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshBasicMaterial({color:0x3f3f3f}));
  var rotx=new THREE.Matrix4().makeRotationX(angx);
  var roty=new THREE.Matrix4().makeRotationY(angy);
  var rotz=new THREE.Matrix4().makeRotationZ(angz);
