@@ -23,9 +23,9 @@ function Cuerpo(){
  this.cam=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshBasicMaterial({color:0x0f0f0f}));
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
  this.placa.position.y=-2.5;
- this.caja.position.y=-1.5;
+ this.caja.position.y=-1.3;
  this.cam.applyMatrix(rotcam);
- this.cam.position.y=-0.1;
+ this.cam.position.y=0.1;
  this.wplaca=new THREE.WireframeHelper(this.placa,0x0);
  this.wcaja=new THREE.WireframeHelper(this.caja,0x0);
  this.wcam=new THREE.WireframeHelper(this.cam,0xffffff);
