@@ -26,12 +26,9 @@ function Cuerpo(){
  this.caja.position.y=-1.1;
  this.cam.applyMatrix(rotcam);
  this.cam.position.y=0.3;
- this.wplaca=new THREE.WireframeHelper(this.placa,0x0);
- this.wcaja=new THREE.WireframeHelper(this.caja,0x0);
- this.wcam=new THREE.WireframeHelper(this.cam,0xffffff);
- this.add(this.placa,this.wplaca);
- this.add(this.caja,this.wcaja);
- this.add(this.cam,this.wcam);
+ this.add(this.placa);
+ this.add(this.caja);
+ this.add(this.cam);
 }
 
 function Robot(){
