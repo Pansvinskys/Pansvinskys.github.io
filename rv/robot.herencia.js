@@ -32,7 +32,6 @@ function cuerpo(){
 
 function robot(){
  llanta.call(this);
- cuerpo.call(this);
  this.llanta1=new llanta(-2,2,-3,Math.PI/2,0,0);
  this.llanta2=new llanta(0,-3,2,Math.PI/2,0,0);
  this.llanta3=new llanta(2,2,-3,Math.PI/2,0,0);
