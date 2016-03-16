@@ -10,7 +10,7 @@ function setup(){
  luzPuntual.position.y=10;
  luzPuntual.position.z=10;
  escena=new THREE.Scene();
- escena.add(malla);
+ escena.add(malla,luzPuntual);
  camara=new THREE.PerspectiveCamera();
  camara.position.z=5;
  renderer=new THREE.WebGLRenderer();
