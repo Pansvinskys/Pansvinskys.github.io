@@ -2,9 +2,9 @@ function setup(){
  THREE.ImageUtils.crossOrigin='';
  var textura  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/planets/earth_atmos_2048.pg');
  var material =new THREE.MeshPhongMaterial({map:textura});
- var forma    =new THREE.Sphere(1);
+ var forma    =new THREE.SphereGeometry(1);
  malla        =new THREE.Mesh(forma,material);
- malla.scale.set(1,1,1);
+ malla.rotation.z+=0.25;
  
  var luzPuntual=new THREE.PointLight(0xffffff);
  luzPuntual.position.x=10;
@@ -21,7 +21,6 @@ function setup(){
 
 function loop(){
 requestAnimationFrame(loop);
-malla.rotation.x+=0.01;
 malla.rotation.y+=0.01;
 renderer.render(escena,camara);
 }
