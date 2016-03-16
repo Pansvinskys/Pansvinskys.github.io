@@ -1,6 +1,6 @@
 function setup(){
  THREE.ImageUtils.crossOrigin='';
- var textura  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/planets/earth_atmos_2048.pg');
+ var textura  =THREE.ImageUtils.loadTexture('http://threejs.org/examples/textures/planets/earth_atmos_2048.png');
  var material =new THREE.MeshPhongMaterial({map:textura});
  var forma    =new THREE.SphereGeometry(1);
  malla        =new THREE.Mesh(forma,material);
@@ -13,7 +13,7 @@ function setup(){
  escena=new THREE.Scene();
  escena.add(malla,luzPuntual);
  camara=new THREE.PerspectiveCamera();
- camara.position.z=10;
+ camara.position.z=5;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*0.95,window.innerHeight*0.95);
  document.body.appendChild(renderer.domElement);
