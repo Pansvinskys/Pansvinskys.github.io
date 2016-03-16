@@ -4,7 +4,7 @@ function setup(){
  var material =new THREE.MeshPhongMaterial({map:textura});
  var forma    =new THREE.BoxGeometry(1,1,1);
  malla        =new THREE.Mesh(forma,material);
- malla.scale.set(1,4,9);
+ malla.scale.set(1,1,1);
  
  var luzPuntual=new THREE.PointLight(0xffffff);
  luzPuntual.position.x=10;
