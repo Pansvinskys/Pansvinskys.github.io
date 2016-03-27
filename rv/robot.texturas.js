@@ -18,7 +18,7 @@ function posicionLlanta(cosa,xp,yp,zp){
 
 function Cuerpo(){
  THREE.ImageUtils.crossOrigin='';
- var textura  =THREE.ImageUtils.loadTexture('https://github.com/Pansvinskys/Pansvinskys.github.io/blob/master/imagenes/metal-01.jpg');
+ var textura  =THREE.ImageUtils.loadTexture('https://github.com/Pansvinskys/Pansvinskys.github.io/blob/master/rv/metal-01.jpg');
  THREE.Object3D.call(this);
  this.placa=new THREE.Mesh(new THREE.BoxGeometry(6,0.5,4),new THREE.MeshPhongMaterial({map:textura}));
  this.caja=new THREE.Mesh(new THREE.BoxGeometry(2,2,2),new THREE.MeshPhongMaterial({map:textura}));
