@@ -18,7 +18,7 @@ function posicionLlanta(cosa,xp,yp,zp){
 
 function Cuerpo(){
  THREE.ImageUtils.crossOrigin='';
- var textura  =THREE.ImageUtils.loadTexture('textures/compressed/hepatica_dxt3_mip.dds');
+ var textura  =THREE.ImageUtils.loadTexture('https://github.com/mrdoob/three.js/blob/master/examples/textures/compressed/hepatica_dxt3_mip.dds');
  textura.anisotropy = 4;
  THREE.Object3D.call(this);
  this.placa=new THREE.Mesh(new THREE.BoxGeometry(6,0.5,4),new THREE.MeshPhongMaterial({map:textura}));
