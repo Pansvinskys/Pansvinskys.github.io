@@ -15,7 +15,7 @@ document.body.appendChild(renderer.domElement);
 step=0.01;
 }
 
-loop(){
+function loop(){
 var intersects=raycaster.intersectObjects(escena.children);
 if(intersects.length>0) step=-step;
 cubo1.rotation.x+=step;
