@@ -73,8 +73,9 @@ function setup(){
  luzPuntual.position.y=10;
  luzPuntual.position.z=10;
  rob=new Robot();
+ obs=new Obstaculos();
  escena=new THREE.Scene();
- escena.add(rob,luzPuntual);
+ escena.add(rob,luzPuntual,obs);
  camara=new THREE.PerspectiveCamera();
  camara.position.y=100;
  renderer=new THREE.WebGLRenderer();
@@ -95,6 +96,6 @@ rob.llanta5.rotation.z+=0.1;
 rob.llanta6.rotation.z+=0.1;
 }
 
-var escena,camara,renderer,rob;
+var escena,camara,renderer,rob,obs;
 setup();
 loop();
