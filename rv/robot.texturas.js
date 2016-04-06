@@ -17,7 +17,7 @@ function posicionLlanta(cosa,xp,yp,zp){
 }
 
 function Cuerpo(){
- THREE.ImageUtils.crossOrigin='';
+ THREE.ImageUtils.crossOrigin='true';
  var textura  =THREE.ImageUtils.loadTexture('http://www.texturesforest.com/wp-content/uploads/2015/12/metal-02.jpg');
  THREE.Object3D.call(this);
  this.placa=new THREE.Mesh(new THREE.BoxGeometry(6,0.5,4),new THREE.MeshPhongMaterial({map:textura}));
