@@ -58,8 +58,9 @@ function Obstaculos(){
  THREE.ImageUtils.crossOrigin='';
  var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/rv/wall-1033777_960_720.jpg?raw=true');
  THREE.Object3D.call(this);
- cubo1=new THREE.Mesh(new THREE.BoxGeometry(5,5,5),new THREE.MeshBasicMaterial({map:textura}));
- cubo1.position.x=10;
+ this.cubo1=new THREE.Mesh(new THREE.BoxGeometry(5,5,5),new THREE.MeshBasicMaterial({map:textura}));
+ this.cubo1.position.x=10;
+ this.add(this.cubo1);
 }
 
 Llanta.prototype=new THREE.Object3D();
