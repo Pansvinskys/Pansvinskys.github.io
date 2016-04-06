@@ -59,7 +59,7 @@ function Obstaculos(){
  var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/rv/wall-1033777_960_720.jpg?raw=true');
  THREE.Object3D.call(this);
  cubo1=new THREE.Mesh(new THREE.BoxGeometry(5,5,5),new THREE.MeshBasicMaterial({map:textura}));
- cubo1.position.x=20;
+ cubo1.position.x=10;
 }
 
 Llanta.prototype=new THREE.Object3D();
