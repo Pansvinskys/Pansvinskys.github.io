@@ -72,7 +72,7 @@ function Obstaculos(){
     this.cubo1[j*10+i]=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshBasicMaterial({map:textura}));
     this.cubo1[j*10+i].position.x=-10+i;
     this.cubo1[j*10+i].position.y=-10+j;
-    this.add(this.cubo1[j*10+i]);
+    //this.add(this.cubo1[j*10+i]);
    }
    else if(mapa[j][i]=="0"){
     
