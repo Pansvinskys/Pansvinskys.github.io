@@ -86,7 +86,6 @@ function Obstaculos(){
  }
  this.cubo1=new THREE.Mesh(new THREE.BoxGeometry(5,5,5),new THREE.MeshBasicMaterial({map:textura}));
  this.cubo1.position.x=10;
- this.add(this.cubo1);
 }
 
 Llanta.prototype=new THREE.Object3D();
