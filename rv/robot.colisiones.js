@@ -59,7 +59,31 @@ function Obstaculos(){
  var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/rv/wall-1033777_960_720.jpg?raw=true');
  THREE.Object3D.call(this);
  var mapa=[];
- //mapa[1]=
+ var cubo1=[];
+ mapa[0]=["x","x","x","x","x","x","x","x","x","x","x"];
+ mapa[1]=["x","0","0","0","0","0","0","0","0","0","x"];
+ mapa[2]=["x","0","0","0","0","0","0","0","0","0","x"];
+ mapa[3]=["x","0","0","0","0","r","0","0","0","0","x"];
+ mapa[4]=["x","0","0","0","0","0","0","0","0","0","x"];
+ mapa[5]=["x","x","x","x","x","x","x","x","x","x","x"];
+ for(j=0;j<=5,i++){
+  for(i=0;i<=10,i++){
+   if(mapa[j][i]=="x"){
+    this.cubo1[j*10+i]=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshBasicMaterial({map:textura}));
+    this.cubo1[j*10+i].position.x=-10+i;
+    this.cubo1[j*10+i].position.y=-10+j;
+    this.add(this.cubo1[j*10+i]);
+   }
+   else if(mapa[j][i]=="0"){
+    
+   }
+   else if(mapa[j][i]=="r"){
+    
+   }
+   else{
+   }
+  }
+ }
  this.cubo1=new THREE.Mesh(new THREE.BoxGeometry(5,5,5),new THREE.MeshBasicMaterial({map:textura}));
  this.cubo1.position.x=10;
  this.add(this.cubo1);
