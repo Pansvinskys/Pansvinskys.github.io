@@ -66,8 +66,8 @@ function Obstaculos(){
  mapa[3]=["x","0","0","0","0","r","0","0","0","0","x"];
  mapa[4]=["x","0","0","0","0","0","0","0","0","0","x"];
  mapa[5]=["x","x","x","x","x","x","x","x","x","x","x"];
- for(j=0;j<=5,i++){
-  for(i=0;i<=10,i++){
+ for(j=0;j<=5;i++){
+  for(i=0;i<=10;i++){
    if(mapa[j][i]=="x"){
     this.cubo1[j*10+i]=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshBasicMaterial({map:textura}));
     this.cubo1[j*10+i].position.x=-10+i;
