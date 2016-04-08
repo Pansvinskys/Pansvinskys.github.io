@@ -78,7 +78,10 @@ function Obstaculos(){
     
    }
    else if(mapa[j][i]=="r"){
-    
+   this.rob=new Robot();
+   this.rob.position.x=-20+4*i;
+   this.rob.position.z=-20+8*j;
+   this.add(this.rob);
    }
    else{
    }
@@ -96,7 +99,6 @@ function setup(){
  luzPuntual.position.x=10;
  luzPuntual.position.y=10;
  luzPuntual.position.z=10;
- rob=new Robot();
  obs=new Obstaculos();
  escena=new THREE.Scene();
  escena.add(rob,luzPuntual,obs);
