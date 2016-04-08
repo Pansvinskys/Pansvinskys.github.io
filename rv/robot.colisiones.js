@@ -52,6 +52,7 @@ function Robot(){
  this.cuerpobot=new Cuerpo();
  this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4,this.llanta5,this.llanta6);
  this.add(this.cuerpobot);
+ 
 }
 
 function Obstaculos(){
@@ -79,6 +80,7 @@ function Obstaculos(){
    }
    else if(mapa[j][i]=="r"){
    this.rob=new Robot();
+   this.raycaster=new THREE.Raycaster(this.rob.position,new THREE.Vector3(0,0,1));
    this.rob.position.x=-20+4*i;
    this.rob.position.z=-20+8*j;
    this.add(this.rob);
@@ -110,7 +112,7 @@ function setup(){
 }
 
 function loop(){
-
+obstaculo1=obs.raycaster.intersectObjects(escena.children);
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
