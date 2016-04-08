@@ -53,7 +53,9 @@ function Robot(){
  this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4,this.llanta5,this.llanta6);
  this.add(this.cuerpobot);
 }
-
+Llanta.prototype=new THREE.Object3D();
+Cuerpo.prototype=new THREE.Object3D();
+Robot.prototype=new THREE.Object3D();
 function Obstaculos(){
  THREE.ImageUtils.crossOrigin='';
  var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/rv/wall-1033777_960_720.jpg?raw=true');
@@ -88,10 +90,6 @@ function Obstaculos(){
   }
  }
 }
-
-Llanta.prototype=new THREE.Object3D();
-Cuerpo.prototype=new THREE.Object3D();
-Robot.prototype=new THREE.Object3D();
 Obstaculos.prototype=new THREE.Object3D();
 
 function setup(){
