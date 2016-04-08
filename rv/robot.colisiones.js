@@ -114,12 +114,12 @@ function loop(){
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
-rob.llanta1.rotation.z+=0.1;
-rob.llanta2.rotation.z+=0.1;
-rob.llanta3.rotation.z+=0.1;
-rob.llanta4.rotation.z+=0.1;
-rob.llanta5.rotation.z+=0.1;
-rob.llanta6.rotation.z+=0.1;
+obs.rob.llanta1.rotation.z+=0.1;
+obs.rob.llanta2.rotation.z+=0.1;
+obs.rob.llanta3.rotation.z+=0.1;
+obs.rob.llanta4.rotation.z+=0.1;
+obs.rob.llanta5.rotation.z+=0.1;
+obs.rob.llanta6.rotation.z+=0.1;
 }
 
 var escena,camara,renderer,rob,obs;
