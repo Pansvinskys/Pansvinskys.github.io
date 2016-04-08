@@ -69,9 +69,9 @@ function Obstaculos(){
  for(j=0;j<=5;j++){
   for(i=0;i<=10;i++){
    if(mapa[j][i]=="x"){
-    this.cubo1[j*10+i]=new THREE.Mesh(new THREE.BoxGeometry(4,4,5),new THREE.MeshBasicMaterial({map:textura}));
+    this.cubo1[j*10+i]=new THREE.Mesh(new THREE.BoxGeometry(4,4,7),new THREE.MeshBasicMaterial({map:textura}));
     this.cubo1[j*10+i].position.x=-20+4*i;
-    this.cubo1[j*10+i].position.z=-20+5*j;
+    this.cubo1[j*10+i].position.z=-20+7*j;
     this.add(this.cubo1[j*10+i]);
    }
    else if(mapa[j][i]=="0"){
