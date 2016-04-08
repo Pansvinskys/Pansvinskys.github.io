@@ -59,7 +59,7 @@ function Obstaculos(){
  var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/rv/wall-1033777_960_720.jpg?raw=true');
  THREE.Object3D.call(this);
  var mapa=[];
- this.cubo1=[];
+ //this.cubo1=[];
  mapa[0]=["x","x","x","x","x","x","x","x","x","x","x"];
  mapa[1]=["x","0","0","0","0","0","0","0","0","0","x"];
  mapa[2]=["x","0","0","0","0","0","0","0","0","0","x"];
