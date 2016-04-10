@@ -118,22 +118,22 @@ obstaculo1=obs.raycaster.intersectObjects(escena.children,true);
 if((obstaculo1.length>0&&(obstaculo1[0].distance<=3))){
  if(dir==1){
   obs.rob.rotation.y=Math.PI/2;
-  raycaster.set(obs.rob.position,new THREE.Vector3(0,0,-1));
+  obs.raycaster.set(obs.rob.position,new THREE.Vector3(0,0,-1));
   dir=2;
  }
  else if(dir==2){
   obs.rob.rotation.y=Math.PI/2;
-  raycaster.set(obs.rob.position,new THREE.Vector3(-1,0,0));
+  obs.raycaster.set(obs.rob.position,new THREE.Vector3(-1,0,0));
   dir=3;
  }
  else if(dir==3){
   obs.rob.rotation.y=Math.PI/2;
-  raycaster.set(obs.rob.position,new THREE.Vector3(0,0,1));
+  obs.raycaster.set(obs.rob.position,new THREE.Vector3(0,0,1));
   dir=4;
  }
  else if(dir==4){
   obs.rob.rotation.y=Math.PI/2;
-  raycaster.set(obs.rob.position,new THREE.Vector3(1,0,0));
+  obs.raycaster.set(obs.rob.position,new THREE.Vector3(1,0,0));
   dir=1;
  }
 }
