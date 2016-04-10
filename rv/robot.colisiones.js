@@ -126,6 +126,7 @@ obs.rob.llanta3.rotation.z+=0.1;
 obs.rob.llanta4.rotation.z+=0.1;
 obs.rob.llanta5.rotation.z+=0.1;
 obs.rob.llanta6.rotation.z+=0.1;
+console.log(obs.raycaster.position);
 }
 
 var escena,camara,renderer,rob,obs;
