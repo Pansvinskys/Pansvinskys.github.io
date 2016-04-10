@@ -80,7 +80,7 @@ function Obstaculos(){
    }
    else if(mapa[j][i]=="r"){
    this.rob=new Robot();
-   this.raycaster=new THREE.Raycaster(new THREE.Vector3(this.rob.position.x,this.rob.position.y,this.rob.position.z),new THREE.Vector3(1,0,0));
+   this.raycaster=new THREE.Raycaster(this.rob.position,new THREE.Vector3(1,0,0));
    this.rob.position.x=-20+4*i;
    this.rob.position.z=-20+8*j;
    this.add(this.rob);
@@ -126,8 +126,6 @@ obs.rob.llanta3.rotation.z+=0.1;
 obs.rob.llanta4.rotation.z+=0.1;
 obs.rob.llanta5.rotation.z+=0.1;
 obs.rob.llanta6.rotation.z+=0.1;
-var r=obstaculo1.length;
-console.log(r);
 }
 
 var escena,camara,renderer,rob,obs;
