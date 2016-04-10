@@ -80,7 +80,7 @@ function Obstaculos(){
    }
    else if(mapa[j][i]=="r"){
    this.rob=new Robot();
-   this.raycaster=new THREE.Raycaster(new THREE.Vector3(this.rob.position.x+.1,this.rob.position.y,this.rob.position.z),new THREE.Vector3(1,0,0));
+   this.raycaster=new THREE.Raycaster(new THREE.Vector3(this.rob.position.x,this.rob.position.y,this.rob.position.z),new THREE.Vector3(1,0,0));
    this.rob.position.x=-20+4*i;
    this.rob.position.z=-20+8*j;
    this.add(this.rob);
@@ -114,7 +114,7 @@ function setup(){
 
 function loop(){
 obstaculo1=obs.raycaster.intersectObjects(escena.children,true);
-if((obstaculo1.length>0&&(obstaculo1[0].distance<=0.5)))
+if((obstaculo1.length>0&&(obstaculo1[0].distance<=3)))
 step=-step;
 obs.rob.position.x+=step;
 camara.lookAt( escena.position );
