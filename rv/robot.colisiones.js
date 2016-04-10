@@ -98,9 +98,9 @@ Obstaculos.prototype=new THREE.Object3D();
 
 function setup(){
  var luzPuntual=new THREE.PointLight(0xffffff);
- luzPuntual.position.x=10;
- luzPuntual.position.y=10;
- luzPuntual.position.z=10;
+ luzPuntual.position.x=0;
+ luzPuntual.position.y=0;
+ luzPuntual.position.z=0;
  obs=new Obstaculos();
  escena=new THREE.Scene();
  escena.add(luzPuntual,obs);
