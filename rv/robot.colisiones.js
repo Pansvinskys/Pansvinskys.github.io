@@ -115,7 +115,7 @@ function setup(){
 function loop(){
 obstaculo1=obs.raycaster.intersectObjects(escena.children,true);
 if((obstaculo1.length>0&&(obstaculo1[0].distance<=3))){
-var rotrob=new THREE.Matrix4().makeRotationZ(Math.PI/2);
+var rotrob=new THREE.Matrix4().makeRotationY(Math.PI/2);
 step=-step;
 obs.rob.applyMatrix(rotrob);
 }
