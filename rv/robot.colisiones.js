@@ -126,7 +126,8 @@ obs.rob.llanta3.rotation.z+=0.1;
 obs.rob.llanta4.rotation.z+=0.1;
 obs.rob.llanta5.rotation.z+=0.1;
 obs.rob.llanta6.rotation.z+=0.1;
-console.log(obstaculo1[0].distance);
+var r=obstaculo1[0].distance;
+console.log(r);
 }
 
 var escena,camara,renderer,rob,obs;
