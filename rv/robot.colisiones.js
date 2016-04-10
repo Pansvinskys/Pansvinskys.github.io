@@ -109,10 +109,14 @@ function setup(){
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
+ step=0.01;
 }
 
 function loop(){
 obstaculo1=obs.raycaster.intersectObjects(escena.children);
+if((obstaculo1.length>0&&(obstaculo1[0].distance<=0.5)))
+step=-step;
+obs.rob.position.x+=step;
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
