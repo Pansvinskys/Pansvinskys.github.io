@@ -80,7 +80,7 @@ function Obstaculos(){
    }
    else if(mapa[j][i]=="r"){
    this.rob=new Robot();
-   this.raycaster=new THREE.Raycaster(this.rob.position,new THREE.Vector3(0,0,1));
+   this.raycaster=new THREE.Raycaster(this.rob.position,new THREE.Vector3(1,0,0));
    this.rob.position.x=-20+4*i;
    this.rob.position.z=-20+8*j;
    this.add(this.rob);
@@ -109,7 +109,7 @@ function setup(){
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
- step=0.01;
+ step=0.1;
 }
 
 function loop(){
