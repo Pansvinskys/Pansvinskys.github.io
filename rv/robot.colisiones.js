@@ -80,7 +80,7 @@ function Obstaculos(){
    }
    else if(mapa[j][i]=="r"){
    this.rob=new Robot();
-   this.raycaster=new THREE.Raycaster(new THREE.Vector3(this.rob.position.x,this.rob.position.y,this.rob.position.z+3),new THREE.Vector3(1,0,0));
+   this.raycaster=new THREE.Raycaster(this.rob.position,new THREE.Vector3(1,0,0));
    this.rob.position.x=-20+4*i;
    this.rob.position.z=-20+8*j;
    this.add(this.rob);
