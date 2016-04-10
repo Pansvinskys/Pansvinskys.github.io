@@ -113,7 +113,7 @@ function setup(){
 }
 
 function loop(){
-obstaculo1=obs.raycaster.intersectObjects(escena.children);
+obstaculo1=obs.raycaster.intersectObjects(escena.children,true);
 if((obstaculo1.length>0&&(obstaculo1[0].distance<=0.5)))
 step=-step;
 obs.rob.position.x+=step;
