@@ -114,8 +114,10 @@ function setup(){
 
 function loop(){
 obstaculo1=obs.raycaster.intersectObjects(escena.children,true);
-if((obstaculo1.length>0&&(obstaculo1[0].distance<=3)))
+if((obstaculo1.length>0&&(obstaculo1[0].distance<=3))){
 step=-step;
+obs.rob.applyMatrix(rotrob);
+}
 obs.rob.position.x+=step;
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
@@ -127,7 +129,6 @@ obs.rob.llanta4.rotation.z+=0.1;
 obs.rob.llanta5.rotation.z+=0.1;
 obs.rob.llanta6.rotation.z+=0.1;
 var rotrob=new THREE.Matrix4().makeRotationZ(Math.PI/2);
-obs.rob.applyMatrix(rotrob);
 }
 
 var escena,camara,renderer,rob,obs;
