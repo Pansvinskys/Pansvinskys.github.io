@@ -111,6 +111,12 @@ function setup(){
  document.body.appendChild(renderer.domElement);
  step=0.1;
  dir=1;
+ var clock = new THREE.Clock();
+ var controls = new THREE.FirstPersonControls( camara );
+ controls.movementSpeed = 70;
+ controls.lookSpeed = 0.05;
+ controls.noFly = true;
+ controls.lookVertical = false;
 }
 
 function loop(){
@@ -158,6 +164,7 @@ obs.rob.llanta3.rotation.z+=0.1;
 obs.rob.llanta4.rotation.z+=0.1;
 obs.rob.llanta5.rotation.z+=0.1;
 obs.rob.llanta6.rotation.z+=0.1;
+controls.update(clock.getDelta());
 }
 
 var escena,camara,renderer,rob,obs,dir;
