@@ -116,7 +116,7 @@ function loop(){
 obstaculo1=obs.raycaster.intersectObjects(escena.children,true);
 if((obstaculo1.length>0&&(obstaculo1[0].distance<=3))){
 step=-step;
-obs.rob.rotation.y=10;
+obs.rob.rotation.y=Math.PI/2;
 }
 obs.rob.position.x+=step;
 camara.lookAt( escena.position );
