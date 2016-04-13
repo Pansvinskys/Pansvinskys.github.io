@@ -5,7 +5,7 @@ function Wall(size,x,y){
  this.position.y=y;
 }
 
-wall.prototype=new THREE.Mesh();
+Wall.prototype=new THREE.Mesh();
 
 Environment.prototype.setMap=function(map){
  var _offset=Math.floor(map.length/2);
