@@ -1,4 +1,4 @@
-function Robot (size x,y){
+function Robot (size,x,y){
 Agent.call(this,x,y);
 
 this.sensor= new Sensor();
