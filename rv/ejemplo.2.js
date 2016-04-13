@@ -60,7 +60,7 @@ function loop(){
  requestAnimationFrame(loop);
  environment.sense();
  environment.plan();
- environment.act();}
+ environment.act();
  renderer.render(environment,camera);
 }
 
