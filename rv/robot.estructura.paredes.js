@@ -52,7 +52,7 @@ function Robot(){
  this.spotLight = new THREE.SpotLight(0xffffff,1.0,5);
  this.cuerpobot=new Cuerpo();
  this.spotLight.position.set(this.cuerpobot);
- this.spotLight.rotation.y=Math.PI/2;
+ //this.spotLight.rotation.y=Math.PI/2;
  this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4,this.llanta5,this.llanta6);
  this.add(this.cuerpobot);
  
