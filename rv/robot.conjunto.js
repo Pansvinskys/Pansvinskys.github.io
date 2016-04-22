@@ -60,10 +60,10 @@ function setup(){
  environment.add(camera,luzPuntual);
  clock = new THREE.Clock();
  controls = new THREE.FirstPersonControls( camera );
- controls.movementSpeed = 70;
+ controls.movementSpeed = 50;
  controls.lookSpeed = 0.05;
  controls.noFly = true;
- controls.lookVertical = false;
+ controls.lookVertical = true;
 }
 
 function loop(){
