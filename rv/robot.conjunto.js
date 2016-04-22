@@ -59,7 +59,7 @@ function setup(){
  document.body.appendChild(renderer.domElement);
  environment.add(camera,luzPuntual);
  var clock = new THREE.Clock();
- var controls = new THREE.FirstPersonControls( camera );
+ controls = new THREE.FirstPersonControls( camera );
  controls.movementSpeed = 70;
  controls.lookSpeed = 0.05;
  controls.noFly = true;
@@ -75,6 +75,6 @@ function loop(){
  renderer.render(environment,camera);
 }
 
-var environment,camera,renderer;
+var environment,camera,renderer,controls;
 setup();
 loop();
