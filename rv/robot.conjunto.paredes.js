@@ -1,5 +1,7 @@
 function Wall(size,x,y){
- THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshNormalMaterial());
+ THREE.ImageUtils.crossOrigin='';
+ var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/rv/wall-1033777_960_720.jpg?raw=true');
+ THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.PhongMaterial({map:textura}));
  this.size=size;
  this.position.x=x;
  this.position.y=y;
