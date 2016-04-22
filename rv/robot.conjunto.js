@@ -8,13 +8,13 @@ function Wall(size,x,y){
 Wall.prototype=new THREE.Mesh();
 
 Environment.prototype.setMap=function(map){
- var _offset=Math.floor(map.length/2);
+ //var _offset=Math.floor(map.length/2);
  for(var i=0;i<map.length;i++)
  for(var j=0;j<map.length;j++){
  if(map[i][j]==="x")
- this.add(new Wall(4,j-_offset,-(i-_offset)));
+ this.add(new Wall(4,-20+8*j,-20+4*i));
  else if(map[i][j]==='r')
- this.add(new Robots(j-_offset,-(i-_offset)));
+ this.add(new Robots(-20+8*j,-20+4*i));
  }
 }
 
@@ -53,7 +53,7 @@ function setup(){
  environment=new Environment();
  environment.setMap(mapa);
  camera=new THREE.PerspectiveCamera();
- camera.position.z=30;
+ camera.position.z=50;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
