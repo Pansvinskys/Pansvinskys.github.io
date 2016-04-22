@@ -19,6 +19,10 @@ Environment.prototype.setMap=function(map){
 }
 
 function setup(){
+ var luzPuntual=new THREE.PointLight(0xffffff);
+ luzPuntual.position.x=0;
+ luzPuntual.position.y=10;
+ luzPuntual.position.z=0;
  var mapa=new Array();
  mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxx";
  mapa[1] ="xr              r      x";
@@ -53,7 +57,7 @@ function setup(){
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
- environment.add(camera);
+ environment.add(camera,luzPuntual);
 }
 
 function loop(){
