@@ -12,9 +12,9 @@ Environment.prototype.setMap=function(map){
  for(var i=0;i<map.length;i++)
  for(var j=0;j<map.length;j++){
  if(map[i][j]==="x")
- this.add(new Wall(4,-20+8*j,-20+4*i));
+ this.add(new Wall(4,-20+4*j,-20+4*i));
  else if(map[i][j]==='r')
- this.add(new Robots(-20+8*j,-20+4*i));
+ this.add(new Robots(-20+4*j,-20+4*i));
  }
 }
 
