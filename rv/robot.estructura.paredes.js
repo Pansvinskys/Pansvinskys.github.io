@@ -49,7 +49,7 @@ function Robot(){
  posicionLlanta(this.llanta4,-2,-3,-2);
  posicionLlanta(this.llanta5,0,-3,-2);
  posicionLlanta(this.llanta6,2,-3,-2);
- this.spotLight = new THREE.SpotLight(0xffffff,1.0,5);
+ this.spotLight = new THREE.SpotLight(0xffffff);
  this.cuerpobot=new Cuerpo();
  this.spotLight.position.set(this.cuerpobot);
  //this.spotLight.rotation.y=Math.PI/2;
