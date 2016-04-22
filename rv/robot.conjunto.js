@@ -52,15 +52,22 @@ function setup(){
  
  environment=new Environment();
  environment.setMap(mapa);
- camera=new THREE.PerspectiveCamera();
+ camera=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
  camera.position.z=150;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
  environment.add(camera,luzPuntual);
+ var clock = new THREE.Clock();
+        var controls = new THREE.FirstPersonControls( camara );
+        controls.movementSpeed = 70;
+        controls.lookSpeed = 0.05;
+        controls.noFly = true;
+        controls.lookVertical = false;
 }
 
 function loop(){
+ controls.update(clock.getDelta());
  requestAnimationFrame(loop);
  environment.sense();
  environment.plan();
