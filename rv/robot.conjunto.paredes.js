@@ -23,7 +23,7 @@ Environment.prototype.setMap=function(map){
 function setup(){
  var mapa=new Array();
  mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxx";
- mapa[1] ="xr                     x";
+ mapa[1] ="x                      x";
  mapa[2] ="x                      x";
  mapa[3] ="x                      x"; 
  mapa[4] ="x                      x";
