@@ -47,10 +47,6 @@ function setup(){
  mapa[22]="x    r                 x";
  mapa[23]="x                      x";
  mapa[24]="xxxxxxxxxxxxxxxxxxxxxxxx";
- var luzPuntual=new THREE.PointLight(0xFFFFFF);
- luzPuntual.position.x=10;
- luzPuntual.position.y=10;
- luzPuntual.position.z=10;
  environment=new Environment();
  environment.setMap(mapa);
  camera=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -58,7 +54,7 @@ function setup(){
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
- environment.add(camera,luzPuntual);
+ environment.add(camera);
  //clock = new THREE.Clock();
  //controls = new THREE.FirstPersonControls( camera );
  //controls.movementSpeed = 50;
