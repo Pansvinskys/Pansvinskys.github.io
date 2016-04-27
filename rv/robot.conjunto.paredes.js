@@ -54,21 +54,21 @@ function setup(){
  environment=new Environment();
  environment.setMap(mapa);
  camera=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
- camera.position.z=150;
+ camera.position.z=200;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
  environment.add(camera,luzPuntual);
- clock = new THREE.Clock();
- controls = new THREE.FirstPersonControls( camera );
- controls.movementSpeed = 50;
- controls.lookSpeed = 0.05;
- controls.noFly = true;
- controls.lookVertical = true;
+ //clock = new THREE.Clock();
+ //controls = new THREE.FirstPersonControls( camera );
+ //controls.movementSpeed = 50;
+ //controls.lookSpeed = 0.05;
+ //controls.noFly = true;
+ //controls.lookVertical = true;
 }
 
 function loop(){
- controls.update(clock.getDelta());
+ //controls.update(clock.getDelta());
  requestAnimationFrame(loop);
  environment.sense();
  environment.plan();
