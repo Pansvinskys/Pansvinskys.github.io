@@ -72,13 +72,13 @@ this.sensor= new Sensor();
 this.actuator= new Robot();
 this.actuator.rotation.x=Math.PI/2;
 this.actuator.commands=[];
-this.add(this.actuator);
+this.spotLight = new THREE.SpotLight(0xffffff);
+this.add(this.actuator,this.spotLight);
 }
 
 Robots.prototype=new Agent();
 
 Robots.prototype.sense= function(environment){
-this.spotLight = new THREE.SpotLight(0xffffff);
 this.spotLight.position.set(this.position);
 this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
 var obstaculo= this.sensor.intersectObjects(environment.children,true);
