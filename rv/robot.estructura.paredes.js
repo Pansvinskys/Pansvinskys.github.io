@@ -49,9 +49,7 @@ function Robot(){
  posicionLlanta(this.llanta4,-2,-3,-2);
  posicionLlanta(this.llanta5,0,-3,-2);
  posicionLlanta(this.llanta6,2,-3,-2);
- this.spotLight = new THREE.SpotLight(0xffffff);
  this.cuerpobot=new Cuerpo();
- this.spotLight.position.set(this.cuerpobot);
  //this.spotLight.rotation.y=Math.PI/2;
  this.add(this.llanta1,this.llanta2,this.llanta3,this.llanta4,this.llanta5,this.llanta6);
  this.add(this.cuerpobot);
@@ -80,6 +78,8 @@ this.add(this.actuator);
 Robots.prototype=new Agent();
 
 Robots.prototype.sense= function(environment){
+this.spotLight = new THREE.SpotLight(0xffffff);
+this.spotLight.position.set(this.cuerpobot);
 this.sensor.set(this.position,
 new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
 var obstaculo= this.sensor.intersectObjects(environment.children,true);
