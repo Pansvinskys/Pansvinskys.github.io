@@ -87,7 +87,7 @@ var obstaculo= this.sensor.intersectObjects(environment.children,true);
 if((obstaculo.length>0 && (obstaculo[0].distance<=3)))
 {
 this.sensor.colision=true;
-obstaculo[0].object.material=THREE.MeshBasicMaterial();
+obstaculo[0].object.material=new THREE.MeshBasicMaterial();
 }
 else
 this.sensor.colision=false;
