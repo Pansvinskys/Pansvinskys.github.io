@@ -79,8 +79,8 @@ this.add(this.actuator,this.spotLight);
 Robots.prototype=new Agent();
 
 Robots.prototype.sense= function(environment){
-this.spotLight.position.set(this.position.x,this.position.y,this.position.z+5);
-this.spotLight.rotation=Math.PI/2;
+this.spotLight.position.set(this.position.x*0,this.position.y*0,(this.position.z+5)*0);
+//this.spotLight.rotation=Math.PI/2;
 //this.luzPuntual.position.set(this.position.x,this.position.y,this.position.z+10);
 this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
 var obstaculo= this.sensor.intersectObjects(environment.children,true);
@@ -116,7 +116,7 @@ Robots.prototype.operations.goStraight=function(robot,distance){
  distance=.5;
  robot.position.x+=distance*Math.cos(robot.rotation.z);
  robot.position.y+=distance*Math.sin(robot.rotation.z);
- robot.spotLight.position.set(robot.position.x,robot.position.y,robot.position.z+5);
+ //robot.spotLight.position.set(robot.position.x,robot.position.y,robot.position.z+5);
 };
 
 Robots.prototype.operations.rotateCW=function(robot,angle){
