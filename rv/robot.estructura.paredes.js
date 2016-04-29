@@ -116,7 +116,7 @@ Robots.prototype.operations.goStraight=function(robot,distance){
  distance=.5;
  robot.position.x+=distance*Math.cos(robot.rotation.z);
  robot.position.y+=distance*Math.sin(robot.rotation.z);
- robot.spotLight.position=robot.position;
+ robot.spotLight.position.set(robot.position);
 };
 
 Robots.prototype.operations.rotateCW=function(robot,angle){
