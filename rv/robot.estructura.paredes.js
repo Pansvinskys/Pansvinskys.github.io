@@ -87,7 +87,7 @@ var obstaculo= this.sensor.intersectObjects(environment.children,true);
 if((obstaculo.length>0 && (obstaculo[0].distance<=3)))
 {
 this.sensor.colision=true;
-console.log(obstaculo[0].id);
+obstaculo[0].position=new THREE.Vector3(0,0,0);
 }
 else
 this.sensor.colision=false;
