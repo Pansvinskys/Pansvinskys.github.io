@@ -122,12 +122,11 @@ Robots.prototype.operations.rotateCW=function(robot,angle){
  if(angle===undefined)
  angle=Math.PI/2;
  robot.rotation.z+=angle;
- robot.spotLight.rotation.z+=angle;
 };
 
 Robots.prototype.operations.rotateCCW=function(robot,angle){
  if(angle===undefined)
  angle=Math.PI/2;
  robot.rotation.z+=angle;
- robot.spotLight.rotation.z+=angle;
+ //robot.spotLight.rotation.z+=angle;
 }
