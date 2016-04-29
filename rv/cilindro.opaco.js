@@ -25,6 +25,6 @@ malla.material.opacity=paso;
 renderer.render(escena,camara);
 }
 
-var malla,camara,escena,renderer;
+var malla,camara,escena,renderer,paso,delta;
 setup();
 loop();
