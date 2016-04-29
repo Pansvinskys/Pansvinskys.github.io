@@ -72,7 +72,7 @@ this.actuator= new Robot();
 this.actuator.rotation.x=Math.PI/2;
 this.actuator.commands=[];
 //this.luzPuntual=new THREE.PointLight(0xFFFFFF);
-this.spotLight = new THREE.SpotLight(0xffffff,10,1);
+this.spotLight = new THREE.SpotLight(0xffffff,10,5);
 this.add(this.actuator,this.spotLight);
 }
 
