@@ -73,13 +73,14 @@ this.actuator.rotation.x=Math.PI/2;
 this.actuator.commands=[];
 //this.luzPuntual=new THREE.PointLight(0xFFFFFF);
 this.spotLight = new THREE.SpotLight(0xffffff,10);
-this.add(this.actuator,this.spotLight);
+this.help = new THREE.SpotLightHelper(spotLight);
+this.add(this.actuator,this.spotLight,this.help);
 }
 
 Robots.prototype=new Agent();
 
 Robots.prototype.sense= function(environment){
-this.spotLight.position.set(this.position.x,this.position.y,this.position.z+5);
+this.spotLight.position.set(this.position.x,this.position.y,this.position.z);
 //this.spotLight.rotation.y=Math.PI/2;
 //this.luzPuntual.position.set(this.position.x,this.position.y,this.position.z+10);
 this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
