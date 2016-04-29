@@ -80,7 +80,7 @@ Robots.prototype=new Agent();
 
 Robots.prototype.sense= function(environment){
 this.spotLight.position.set(this.position.x,this.position.y,this.position.z);
-//this.spotLight.rotation.y=Math.PI/2;
+this.spotLight.rotation.angle=Math.PI/5;
 //this.luzPuntual.position.set(this.position.x,this.position.y,this.position.z+10);
 this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
 var obstaculo= this.sensor.intersectObjects(environment.children,true);
