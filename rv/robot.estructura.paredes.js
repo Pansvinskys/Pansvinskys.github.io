@@ -79,8 +79,8 @@ this.add(this.actuator,this.spotLight);
 Robots.prototype=new Agent();
 
 Robots.prototype.sense= function(environment){
-this.spotLight.position.set(0,0,0);
-this.spotLight.lookAt=(0,0,0);
+//this.spotLight.position.set(0,0,0);
+this.spotLight.lookAt=new THREE.Vector3( 0, 0, 0 );
 //this.spotLight.rotation=Math.PI/2;
 //this.luzPuntual.position.set(this.position.x,this.position.y,this.position.z+10);
 this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
