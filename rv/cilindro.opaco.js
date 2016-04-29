@@ -1,8 +1,8 @@
 function setup(){
 var geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
 var material = new THREE.MeshPhongMaterial( {color: 0xffff00} );
-var malla = new THREE.Mesh( geometry, material );
-var luzPuntual=new THREE.PointLight(0xffffff);
+malla = new THREE.Mesh( geometry, material );
+luzPuntual=new THREE.PointLight(0xffffff);
 luzPuntual.position.x=0;
 luzPuntual.position.y=0;
 luzPuntual.position.z=0;
@@ -25,6 +25,6 @@ malla.material.opacity=paso;
 renderer.render(escena,camara);
 }
 
-var malla,camara,escena,renderer,paso,delta;
+var malla,camara,escena,renderer,paso,delta,luzPuntual;
 setup();
 loop();
