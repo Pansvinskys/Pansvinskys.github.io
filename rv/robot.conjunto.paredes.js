@@ -25,14 +25,14 @@ function setup(){
  mapa[0] ="xxxxxxxxxxxxxxxxxxxxxxxx";
  mapa[1] ="x                      x";
  mapa[2] ="x                      x";
- mapa[3] ="x                      x"; 
+ mapa[3] ="x             r        x"; 
  mapa[4] ="x                      x";
  mapa[5] ="x                      x";
  mapa[6] ="x                      x"; 
  mapa[7] ="x                      x";
  mapa[8] ="xxx   xxxxxxxxxxxxxxxxxx";
  mapa[9] ="x                      x";
- mapa[10]="x                      x"; 
+ mapa[10]="x           r          x"; 
  mapa[11]="x                      x";
  mapa[12]="xxxxxxxxxxxxxxxxx  xxxxx";
  mapa[13]="x                      x";
@@ -44,7 +44,7 @@ function setup(){
  mapa[19]="xxxxxxxxx   xxxxxxxxxxxx";
  mapa[20]="x                      x";
  mapa[21]="x                      x";
- mapa[22]="x                      x";
+ mapa[22]="x           r          x";
  mapa[23]="x                      x";
  mapa[24]="xxxxxxxxxxxxxxxxxxxxxxxx";
  environment=new Environment();
