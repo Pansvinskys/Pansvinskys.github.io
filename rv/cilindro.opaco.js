@@ -2,6 +2,7 @@ function setup(){
 var geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
 var material = new THREE.MeshPhongMaterial( {color: 0xffff00} );
 malla = new THREE.Mesh( geometry, material );
+malla.material.transparent=true;
 luzPuntual=new THREE.PointLight(0xffffff);
 luzPuntual.position.x=0;
 luzPuntual.position.y=0;
