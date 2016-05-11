@@ -43,7 +43,7 @@ camara=new THREE.PerspectiveCamera();
 camara.position.z=5;
 cameraOrthoHelper = new THREE.CameraHelper( camara );
 }
-scene.add( cameraOrthoHelper );
+escena.add( cameraOrthoHelper );
 requestAnimationFrame(loop);
 malla.rotation.y+=0.01;
 renderer.render(escena,camara);
