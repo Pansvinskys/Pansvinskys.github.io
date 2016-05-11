@@ -35,6 +35,7 @@ function setup(){
 
 function loop(){
 if(boton==true){
+var timer = Date.now() * 0.0001;
 camara = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
 camara.position.set(0,0,10);
 }
