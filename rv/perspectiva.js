@@ -37,13 +37,13 @@ function loop(){
 var timer = Date.now() * 0.0001;
 if(boton==true){
 camara = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
-camara.position.set(0,0,10);
-}
-else{
-camara=new THREE.PerspectiveCamera();
 camara.position.x = Math.cos( timer ) * 200;
 camara.position.z = Math.sin( timer ) * 200;
 camara.lookAt( scene.position );
+}
+else{
+camara=new THREE.PerspectiveCamera();
+camara.position.z=5;
 }
 requestAnimationFrame(loop);
 malla.rotation.y+=0.01;
