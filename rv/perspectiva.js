@@ -35,7 +35,7 @@ function setup(){
 
 function loop(){
 if(boton==true){
-camara = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 500, 1000 );
+camara = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, 1, 10 );
 }
 else{
 camara=new THREE.PerspectiveCamera();
