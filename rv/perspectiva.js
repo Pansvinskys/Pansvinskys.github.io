@@ -36,16 +36,19 @@ function setup(){
 function loop(){
 if(boton==true){
 camara = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, 1, 10 );
+cameraOrthoHelper = new THREE.CameraHelper( camara );
+scene.add( cameraOrthoHelper );
 }
 else{
 camara=new THREE.PerspectiveCamera();
 camara.position.z=5;
+cameraOrthoHelper = new THREE.CameraHelper( camara );
 }
 requestAnimationFrame(loop);
 malla.rotation.y+=0.01;
 renderer.render(escena,camara);
 }
 
-var malla,camara,escena,renderer,boton;
+var malla,camara,escena,renderer,boton,cameraOrthoHelper;
 setup();
 loop();
