@@ -37,13 +37,13 @@ function loop(){
 if(boton==true){
 camara = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, 1, 10 );
 cameraOrthoHelper = new THREE.CameraHelper( camara );
-scene.add( cameraOrthoHelper );
 }
 else{
 camara=new THREE.PerspectiveCamera();
 camara.position.z=5;
 cameraOrthoHelper = new THREE.CameraHelper( camara );
 }
+scene.add( cameraOrthoHelper );
 requestAnimationFrame(loop);
 malla.rotation.y+=0.01;
 renderer.render(escena,camara);
