@@ -146,16 +146,16 @@ else{
 	camara.position.z=50;
 }
 if(botonu==true){
-	camara.position.x+=1;
+	camara.position.x+=10;
 }
 if(botond==true){
-	camara.position.x-=1;
+	camara.position.x-=10;
 }
 if(botonr==true){
-	camara.position.y+=1;
+	camara.position.y+=10;
 }
 if(botonl==true){
-	camara.position.y-=1;
+	camara.position.y-=10;
 }
 escena.add(ayuda)
 camara.lookAt( escena.position );
