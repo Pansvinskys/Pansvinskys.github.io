@@ -117,12 +117,20 @@ function onKeyDown ( event ) {
 	event.stopPropagation();
 	switch( event.keyCode ) {
 	case 80: boton=true; break;
+	case 38: botonu=true; break;
+	case 40: botond=true; break;
+	case 37: botonl=true; break;
+	case 39: botonr=true; break;
 				}
 	}
 function onKeyUp ( event ) {
 	event.stopPropagation();
 	switch( event.keyCode ) {
 	case 80: boton=false; break;
+	case 38: botonu=false; break;
+	case 40: botond=false; break;
+	case 37: botonl=false; break;
+	case 39: botonr=false; break;
 				}
 	}
 
@@ -137,13 +145,25 @@ else{
 	ayuda=new THREE.CameraHelper(camara);
 	camara.position.z=50;
 }
+if(botonu==true){
+	camara.position.x+=1;
+}
+if(botond==true){
+	camara.position.x-=1;
+}
+if(botonr==true){
+	camara.position.y+=1;
+}
+if(botonl==true){
+	camara.position.y-=1;
+}
 escena.add(ayuda)
 camara.lookAt( escena.position );
 requestAnimationFrame(loop);
 renderer.render(escena,camara);
 }
 
-var escena,camara,renderer,rob,obs,boton,ayuda;
+var escena,camara,renderer,rob,obs,boton,ayuda,botonu,botond,botonl,botonr;
 setup();
 loop();
 
