@@ -130,12 +130,12 @@ function loop(){
 if(boton==true){
 	camara=new THREE.OrthographicCamera();
 	ayuda=new THREE.CameraHelper(camara);
-	camara.position.z=5
+	camara.position.z=50;
 }
 else{
 	camara=new THREE.PerspectiveCamera;
 	ayuda=new THREE.CameraHelper(camara);
-	camara.position.z=5
+	camara.position.z=50;
 }
 escena.add(ayuda)
 camara.lookAt( escena.position );
