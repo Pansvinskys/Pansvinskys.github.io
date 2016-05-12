@@ -128,7 +128,7 @@ function onKeyUp ( event ) {
 
 function loop(){
 if(boton==true){
-	camara=new THREE.OrthographicCamera();
+	camara=new THREE.OrthographicCamera( 100/ - 2, 100 / 2, 100 / 2, 100 / - 2, 10, 100 );
 	ayuda=new THREE.CameraHelper(camara);
 	camara.position.z=50;
 }
