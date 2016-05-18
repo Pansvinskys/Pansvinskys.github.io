@@ -69,6 +69,7 @@ function Robots (x,y){
 Agent.call(this,x,y);
 this.sensor= new Sensor();
 this.actuator= new Robot();
+idRobot=this.actuator.id;
 this.actuator.rotation.x=Math.PI/2;
 this.actuator.commands=[];
 //this.camara=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -79,7 +80,7 @@ this.spotLight = new THREE.SpotLight(0xffffff,10);
 this.spotLight.target.position.set(1,0,0);
 this.add(this.actuator,this.spotLight,this.spotLight.target);
 }
-
+var idRobot;
 Robots.prototype=new Agent();
 
 Robots.prototype.sense= function(environment){
