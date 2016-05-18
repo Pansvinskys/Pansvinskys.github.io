@@ -17,6 +17,8 @@ Environment.prototype.setMap=function(map){
  this.add(new Wall(4,-20+4*j,-20+4*i));
  else if(map[i][j]==='r')
  this.add(new Robots(-20+4*j,-20+4*i));
+ camera=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+ camera.position.set(-20+4*j,-20+4*i,0);
  }
 }
 
@@ -49,8 +51,6 @@ function setup(){
  mapa[24]="xxxxxxxxxxxxxxxxxxxxxxxx";
  environment=new Environment();
  environment.setMap(mapa);
- camera=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
- camera.position.z=150;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
