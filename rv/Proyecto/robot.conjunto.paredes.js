@@ -17,8 +17,6 @@ Environment.prototype.setMap=function(map){
  this.add(new Wall(4,-20+4*j,-20+4*i));
  else if(map[i][j]==='r')
  this.add(new Robots(-20+4*j,-20+4*i));
- camera=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
- camera.position.set(-20+4*j,-20+4*i,20);
  }
 }
 
@@ -55,12 +53,6 @@ function setup(){
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
  environment.add(camera);
- //clock = new THREE.Clock();
- //controls = new THREE.FirstPersonControls( camera );
- //controls.movementSpeed = 50;
- //controls.lookSpeed = 0.05;
- //controls.noFly = true;
- //controls.lookVertical = true;
 }
 
 function loop(){
