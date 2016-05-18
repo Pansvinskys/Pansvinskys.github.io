@@ -49,6 +49,8 @@ function setup(){
  mapa[24]="xxxxxxxxxxxxxxxxxxxxxxxx";
  environment=new Environment();
  environment.setMap(mapa);
+ camara=THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+ camara.position.z=100;
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
@@ -56,12 +58,11 @@ function setup(){
 }
 
 function loop(){
- //controls.update(clock.getDelta());
  requestAnimationFrame(loop);
  environment.sense();
  environment.plan();
  environment.act();
- renderer.render(environment,camera);
+ renderer.render(environment,camara);
 }
 
 var clock,environment,camera,renderer,controls;
