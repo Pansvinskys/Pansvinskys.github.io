@@ -65,6 +65,6 @@ function loop(){
  renderer.render(environment,camara);
 }
 
-var clock,environment,camera,renderer,idRobot;
+var clock,environment,camara,renderer,idRobot;
 setup();
 loop();
