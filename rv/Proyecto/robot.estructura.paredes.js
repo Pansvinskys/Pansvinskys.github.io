@@ -102,9 +102,9 @@ this.sensor2.colision=false;
 Robots.prototype.plan=function (environment){
 this.actuator.commands=[];
 if(pC==false){
- if (this.sensor.colision==true)
+ if (this.sensor.colision==true){
  this.actuator.commands.push('rotateCCW');
- pC=true;
+ pC=true;}
  else
  this.actuator.commands.push('goStraight');
  }
@@ -112,7 +112,6 @@ if(pC==false){
  {
   if (this.sensor2.colision==true)
  this.actuator.commands.push('rotateCCW');
- pC=true;
  else
  this.actuator.commands.push('goStraight');
  }
