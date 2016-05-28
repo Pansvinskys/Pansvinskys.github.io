@@ -71,6 +71,7 @@ function setup(){
  environment.add(camara);
  k=0;
  pC=false;
+ sC=false;
 }
 
 function onKeyDown ( event ) {
@@ -110,6 +111,6 @@ else{
  renderer.render(environment,camara);
 }
 
-var clock,environment,camara,renderer,idRobot,boton,k,pC;
+var clock,environment,camara,renderer,idRobot,boton,k,pC,sC;
 setup();
 loop();
