@@ -120,8 +120,12 @@ if(pC==false){
  this.actuator.commands.push('rotateCCW');
  else if (this.sensor.colision==false&&this.sensor2.colision==false)
  this.actuator.commands.push('goStraight');
- else
+ else{
  this.actuator.commands.push('rotateCW');
+ var delay=3000; //1 second
+  setTimeout(function() {
+  }, delay);
+ }
  }
 };
 
