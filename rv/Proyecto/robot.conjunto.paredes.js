@@ -29,7 +29,7 @@ Environment.prototype.setMap=function(map){
  else if(map[i][j]==='r')
  this.add(new Robots(-20+4*j,-20+4*i));
  else if(map[i][j]==='g')
- this.add(new Goal(-20+4*j,-20+4*i));
+ this.add(new Goal(4,-20+4*j,-20+4*i));
  }
 }
 
