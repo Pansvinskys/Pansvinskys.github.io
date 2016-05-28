@@ -84,7 +84,7 @@ function loop(){
  if(boton==true){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 50 / 2, 50 / 2, 50 / - 2, 5, 200 );
 	camara.position.set(idRobot.position.x,idRobot.position.y,idRobot.position.z);
-	camara.lookAt(new THREE.Vector3(1,1,0));
+	camara.lookAt(new THREE.Vector3(2000,0,0));
 }
 else{
 	camara=new THREE.PerspectiveCamera;
