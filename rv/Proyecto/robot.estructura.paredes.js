@@ -118,10 +118,10 @@ if(pC==false){
  {
  if (this.sensor.colision==true)
  this.actuator.commands.push('rotateCCW');
- else if (this.sensor2.colision==true&&this.sensor3.colision==false)
- this.actuator.commands.push('rotateCW');
- else
+ else if (this.sensor.colision==false&&this.sensor2.colision==true)
  this.actuator.commands.push('goStraight');
+ else
+ this.actuator.commands.push('rotateCW');
  }
 };
 
