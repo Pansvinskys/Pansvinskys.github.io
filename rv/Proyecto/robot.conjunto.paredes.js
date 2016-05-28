@@ -50,7 +50,6 @@ function setup(){
  environment=new Environment();
  environment.setMap(mapa);
  camara=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
- camara.position.set(idRobot.position.x,idRobot.position.y,idRobot.position.z+20);
  renderer=new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
@@ -58,6 +57,7 @@ function setup(){
 }
 
 function loop(){
+ camara.position.set(idRobot.position.x,idRobot.position.y,idRobot.position.z+20);
  requestAnimationFrame(loop);
  environment.sense();
  environment.plan();
