@@ -69,7 +69,8 @@ function setup(){
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
  environment.add(camara);
- k=0
+ k=0;
+ pC=false;
 }
 
 function onKeyDown ( event ) {
@@ -109,6 +110,6 @@ else{
  renderer.render(environment,camara);
 }
 
-var clock,environment,camara,renderer,idRobot,boton,k;
+var clock,environment,camara,renderer,idRobot,boton,k,pC;
 setup();
 loop();
