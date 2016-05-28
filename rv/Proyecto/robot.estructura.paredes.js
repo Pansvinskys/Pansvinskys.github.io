@@ -22,9 +22,9 @@ function Cuerpo(){
  THREE.ImageUtils.crossOrigin='';
  var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/rv/metal-01.jpg?raw=true');
  THREE.Object3D.call(this);
- this.placa=new THREE.Mesh(new THREE.BoxGeometry(6,0.5,4),new THREE.MeshPhongMaterial({map:textura}));
- this.caja=new THREE.Mesh(new THREE.BoxGeometry(2,2,2),new THREE.MeshPhongMaterial({map:textura}));
- this.cam=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshLambertMaterial({color:0x3f3f3f}));
+ this.placa=new THREE.Mesh(new THREE.BoxGeometry(6,0.5,4),new THREE.MeshBasicMaterial({map:textura}));
+ this.caja=new THREE.Mesh(new THREE.BoxGeometry(2,2,2),new THREE.MeshBasicMaterial({map:textura}));
+ this.cam=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshBasicMaterial({color:0x3f3f3f}));
  var rotcam= new THREE.Matrix4().makeRotationZ(Math.PI/2);
  this.placa.position.y=-2.5;
  this.caja.position.y=-1.1;
@@ -122,6 +122,13 @@ Robots.prototype.operations.goStraight=function(robot,distance){
  distance=.5;
  robot.position.x+=distance*Math.cos(robot.rotation.z);
  robot.position.y+=distance*Math.sin(robot.rotation.z);
+ robot.rotation.z+=angle;
+ robot.llanta1.rotation.x=Math.PI/2;
+ robot.llanta2.rotation.x=Math.PI/2;
+ robot.llanta3.rotation.x=Math.PI/2;
+ robot.llanta4.rotation.x=Math.PI/2;
+ robot.llanta5.rotation.x=Math.PI/2;
+ robot.llanta6.rotation.x=Math.PI/2;
  idRobot=robot;
  //robot.spotLight.position.set(robot.position.x,robot.position.y,robot.position.z+5);
 };
@@ -129,7 +136,6 @@ Robots.prototype.operations.goStraight=function(robot,distance){
 Robots.prototype.operations.rotateCW=function(robot,angle){
  if(angle===undefined)
  angle=Math.PI/2;
- robot.rotation.z+=angle;
 };
 
 Robots.prototype.operations.rotateCCW=function(robot,angle){
