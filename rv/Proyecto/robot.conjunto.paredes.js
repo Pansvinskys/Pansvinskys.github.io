@@ -56,6 +56,7 @@ function setup(){
  renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
  document.body.appendChild(renderer.domElement);
  environment.add(camara);
+ k=0
 }
 
 function onKeyDown ( event ) {
@@ -80,9 +81,10 @@ function onKeyUp ( event ) {
 	}
 
 function loop(){
+	k+=1;
  if(boton==true){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 50 / 2, 50 / 2, 50 / - 2, .01, 300 );
-	camara.position.set(idRobot.position.x+4,idRobot.position.y+4,idRobot.position.z);
+	camara.position.set(idRobot.position.x,idRobot.position.y,idRobot.position.z);
 	camara.rotation.z=Math.PI/2;
 	camara.lookAt(idRobot);
 }
@@ -97,6 +99,6 @@ else{
  renderer.render(environment,camara);
 }
 
-var clock,environment,camara,renderer,idRobot,boton;
+var clock,environment,camara,renderer,idRobot,boton,k;
 setup();
 loop();
