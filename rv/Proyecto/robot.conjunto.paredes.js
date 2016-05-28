@@ -86,7 +86,6 @@ function loop(){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 50 / 2, 50 / 2, 50 / - 2, .01, 300 );
 	camara.position.set(idRobot.position.x+Math.sin(k),idRobot.position.y+Math.sin(k),idRobot.position.z);
 	camara.rotation.z=Math.PI/2;
-	camara.lookAt(idRobot);
 }
 else{
 	camara=new THREE.PerspectiveCamera;
