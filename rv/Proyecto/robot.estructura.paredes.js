@@ -147,7 +147,7 @@ Robots.prototype.operations.goStraight=function(robot,distance){
 
 Robots.prototype.operations.rotateCW=function(robot,angle){
  if(angle===undefined)
- //angle=Math.PI/2;
+ angle=Math.PI/2;
  //robot.rotation.z-=angle;
 };
 
