@@ -116,8 +116,6 @@ if(pC==false){
  this.actuator.commands.push('goStraight');
  if (this.sensor2.colision==true)
  this.actuator.commands.push('rotateCW');
- else
- this.actuator.commands.push('goStraight');
  }
 };
 
