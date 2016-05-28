@@ -111,7 +111,7 @@ if(pC==false){
  else
  {
   if (this.sensor2.colision==true||this.sensor.colision==true)
- this.actuator.commands.push('rotateCCW');
+ this.actuator.commands.push('rotateCW');
  else
  this.actuator.commands.push('goStraight');
  }
@@ -146,7 +146,7 @@ Robots.prototype.operations.goStraight=function(robot,distance){
 Robots.prototype.operations.rotateCW=function(robot,angle){
  if(angle===undefined)
  angle=Math.PI/2;
- robot.rotation.z+=angle;
+ robot.rotation.z-=angle;
 };
 
 Robots.prototype.operations.rotateCCW=function(robot,angle){
