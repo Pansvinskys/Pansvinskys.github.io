@@ -9,6 +9,15 @@ function Wall(size,x,y){
 
 Wall.prototype=new THREE.Mesh();
 
+function Goal(size,x,y){
+ THREE.ImageUtils.crossOrigin='';
+ var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/imagenes/cuadros.jpg?raw=true');
+ THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size),new THREE.MeshBasicMaterial({map:textura}));
+ this.size=size;
+ this.position.x=x;
+ this.position.y=y;
+}
+
 Environment.prototype.setMap=function(map){
  //var _offset=Math.floor(map.length/2);
  for(var i=0;i<map.length;i++)
@@ -17,6 +26,8 @@ Environment.prototype.setMap=function(map){
  this.add(new Wall(4,-20+4*j,-20+4*i));
  else if(map[i][j]==='r')
  this.add(new Robots(-20+4*j,-20+4*i));
+ else if(map[i][j]==='g')
+ this.add(new Goal(-20+4*j,-20+4*i));
  }
 }
 
@@ -46,7 +57,7 @@ function setup(){
  mapa[19]="xxxxxxxxx   xxxxxxxxxxxx";
  mapa[20]="x                      x";
  mapa[21]="x                      x";
- mapa[22]="x                      x";
+ mapa[22]="x          g           x";
  mapa[23]="x                      x";
  mapa[24]="xxxxxxxxxxxxxxxxxxxxxxxx";
  environment=new Environment();
@@ -83,7 +94,7 @@ function onKeyUp ( event ) {
 function loop(){
  if(boton==true){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 50 / 2, 50 / 2, 50 / - 2, 5, 200 );
-	camara.position.set(idRobot.position.x,idRobot.position.y,idRobot.position.z);
+	camara.position.position.z=150;
 	camara.lookAt(new THREE.Vector3(2000,0,0));
 }
 else{
