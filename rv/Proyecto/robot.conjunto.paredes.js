@@ -95,6 +95,6 @@ else{
  renderer.render(environment,camara);
 }
 
-var clock,environment,camara,renderer,idRobot;
+var clock,environment,camara,renderer,idRobot,boton;
 setup();
 loop();
