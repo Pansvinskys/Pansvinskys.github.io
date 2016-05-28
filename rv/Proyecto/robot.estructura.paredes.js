@@ -96,11 +96,11 @@ else
 this.sensor.colision=false;
 if((obstaculo2.length>0 && (obstaculo2[0].distance>=3)))
 {
-this.sensor.colision=true;
+this.sensor2.colision=true;
 obstaculo[0].object.material=new THREE.MeshBasicMaterial();
 }
 else
-this.sensor.colision=false;
+this.sensor2.colision=false;
 };
 
 Robots.prototype.plan=function (environment){
