@@ -74,16 +74,14 @@ this.actuator= new Robot();
 idRobot=this.actuator;
 this.actuator.rotation.x=Math.PI/2;
 this.actuator.commands=[];
-this.spotLight = new THREE.SpotLight(0xffffff,10);
-this.spotLight.target.position.set(1,0,0);
-this.add(this.actuator,this.spotLight,this.spotLight.target);
+this.add(this.actuator);
 }
 Robots.prototype=new Agent();
 
 Robots.prototype.sense= function(environment){
 this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
-this.sensor2.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z)-Math.PI/2,Math.sin(this.rotation.z)-Math.PI/2,0));
-this.sensor3.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z)+Math.PI/2,Math.sin(this.rotation.z)+Math.PI/2,0));
+this.sensor2.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z-Math.PI/2),Math.sin(this.rotation.z-Math.PI/2),0));
+this.sensor3.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z+Math.PI/2),Math.sin(this.rotation.z+Math.PI/2),0));
 var obstaculo= this.sensor.intersectObjects(environment.children,true);
 var obstaculo2= this.sensor2.intersectObjects(environment.children,true);
 var obstaculo3= this.sensor3.intersectObjects(environment.children,true);
@@ -135,7 +133,6 @@ Robots.prototype.operations.goStraight=function(robot,distance){
  robot.actuator.llanta5.rotation.z-=.1;
  robot.actuator.llanta6.rotation.z-=.1;
  idRobot=robot;
- //robot.spotLight.position.set(robot.position.x,robot.position.y,robot.position.z+5);
 };
 
 Robots.prototype.operations.rotateCW=function(robot,angle){
