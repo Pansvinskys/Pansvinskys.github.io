@@ -122,9 +122,8 @@ if(pC==false){
  this.actuator.commands.push('goStraight');
  else{
  this.actuator.commands.push('rotateCW');
- var delay=3000; //1 second
-  setTimeout(function() {
-  }, delay);
+ var a = "world";
+ setTimeout(alert("Hello " + a), 3000);
  }
  }
 };
