@@ -110,7 +110,11 @@ if(pC==false){
  }
  else
  {
-  if (this.sensor2.colision==true||this.sensor.colision==true)
+  if (this.sensor.colision==true)
+ this.actuator.commands.push('rotateCCW');
+ else
+ this.actuator.commands.push('goStraight');
+ if (this.sensor2.colision==true)
  this.actuator.commands.push('rotateCW');
  else
  this.actuator.commands.push('goStraight');
