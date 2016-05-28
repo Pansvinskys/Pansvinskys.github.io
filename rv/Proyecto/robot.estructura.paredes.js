@@ -94,7 +94,7 @@ obstaculo[0].object.material=new THREE.MeshBasicMaterial();
 }
 else
 this.sensor.colision=false;
-if((obstaculo2.length>0 && (obstaculo2[0].distance>=3)))
+if((obstaculo2.length>0 && (obstaculo2[0].distance>=1)))
 {
 this.sensor2.colision=true;
 obstaculo2[0].object.material=new THREE.MeshBasicMaterial();
