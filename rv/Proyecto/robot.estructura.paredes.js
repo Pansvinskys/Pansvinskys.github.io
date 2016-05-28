@@ -68,14 +68,12 @@ Robot.prototype=new THREE.Object3D();
 function Robots (x,y){
 Agent.call(this,x,y);
 this.sensor= new Sensor();
+this.sensor2= new Sensor();
+this.sensor3= new Sensor();
 this.actuator= new Robot();
 idRobot=this.actuator;
 this.actuator.rotation.x=Math.PI/2;
 this.actuator.commands=[];
-//this.camara=new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-//this.camara.position.set(0,0,0);
-//this.camara.lookAt(new THREE.Vector3(1,0,0));
-//this.luzPuntual=new THREE.PointLight(0xFFFFFF);
 this.spotLight = new THREE.SpotLight(0xffffff,10);
 this.spotLight.target.position.set(1,0,0);
 this.add(this.actuator,this.spotLight,this.spotLight.target);
@@ -83,12 +81,20 @@ this.add(this.actuator,this.spotLight,this.spotLight.target);
 Robots.prototype=new Agent();
 
 Robots.prototype.sense= function(environment){
-//this.spotLight.position.set(0,0,0);
-//this.spotLight.rotation=Math.PI/2;
-//this.luzPuntual.position.set(this.position.x,this.position.y,this.position.z+10);
 this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
+this.sensor2.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z)-Math.PI/2,Math.sin(this.rotation.z)-Math.PI/2,0));
+this.sensor3.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z)+Math.PI/2,Math.sin(this.rotation.z)+Math.PI/2,0));
 var obstaculo= this.sensor.intersectObjects(environment.children,true);
+var obstaculo2= this.sensor2.intersectObjects(environment.children,true);
+var obstaculo3= this.sensor3.intersectObjects(environment.children,true);
 if((obstaculo.length>0 && (obstaculo[0].distance<=3)))
+{
+this.sensor.colision=true;
+obstaculo[0].object.material=new THREE.MeshBasicMaterial();
+}
+else
+this.sensor.colision=false;
+if((obstaculo2.length>0 && (obstaculo2[0].distance>=3)))
 {
 this.sensor.colision=true;
 obstaculo[0].object.material=new THREE.MeshBasicMaterial();
@@ -142,5 +148,4 @@ Robots.prototype.operations.rotateCCW=function(robot,angle){
  if(angle===undefined)
  angle=Math.PI/2;
  robot.rotation.z+=angle;
- //robot.spotLight.rotation.z+=angle;
 }
