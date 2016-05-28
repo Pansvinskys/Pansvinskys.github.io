@@ -83,7 +83,7 @@ function loop(){
  if(boton==true){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 50 / 2, 50 / 2, 50 / - 2, 1, 20 );
 	camara.position.set(idRobot.position.x+5,idRobot.position.y+5,idRobot.position.z);
-	camara.rotation.x=Math.PI/2;
+	camara.rotation.z=Math.PI/2;
 	camara.lookAt(idRobot);
 }
 else{
