@@ -81,7 +81,7 @@ Robots.prototype=new Agent();
 Robots.prototype.sense= function(environment){
 this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
 this.sensor2.set(new THREE.Vector3(this.position.x+4,this.position.y,this.position.z),new THREE.Vector3(Math.cos(this.rotation.z-Math.PI/2),Math.sin(this.rotation.z-Math.PI/2),0));
-this.sensor3.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z+Math.PI/2),Math.sin(this.rotation.z+Math.PI/2),0));
+this.sensor3.set(new THREE.Vector3(this.position.x-4,this.position.y,this.position.z),new THREE.Vector3(Math.cos(this.rotation.z-Math.PI/2),Math.sin(this.rotation.z-Math.PI/2),0));
 var obstaculo= this.sensor.intersectObjects(environment.children,true);
 var obstaculo2= this.sensor2.intersectObjects(environment.children,true);
 var obstaculo3= this.sensor3.intersectObjects(environment.children,true);
@@ -97,6 +97,12 @@ this.sensor2.colision=true;
 }
 else
 this.sensor2.colision=false;
+if((obstaculo3.length>0 && (obstaculo3[0].distance>=5)))
+{
+this.sensor3.colision=true;
+}
+else
+this.sensor3.colision=false;
 };
 
 Robots.prototype.plan=function (environment){
@@ -114,7 +120,7 @@ if(pC==false){
  this.actuator.commands.push('rotateCCW');
  else
  this.actuator.commands.push('goStraight');
- if (this.sensor2.colision==true)
+ if (this.sensor2.colision==true&&this.sensor3.colision==false)
  this.actuator.commands.push('rotateCW');
  }
 };
