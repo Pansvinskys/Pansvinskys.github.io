@@ -81,11 +81,10 @@ function onKeyUp ( event ) {
 	}
 
 function loop(){
-	k+=.01;
  if(boton==true){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 50 / 2, 50 / 2, 50 / - 2, .01, 300 );
-	camara.position.set(idRobot.position.x+Math.sin(k),idRobot.position.y+Math.sin(k),idRobot.position.z+Math.cos(k));
-	camara.rotation.z=Math.PI/2;
+	camara.position.set(idRobot.position.x+2,idRobot.position.y+2,idRobot.position.z);
+	camara.lookAt(new THREE.Vector3(1,0,0));
 }
 else{
 	camara=new THREE.PerspectiveCamera;
