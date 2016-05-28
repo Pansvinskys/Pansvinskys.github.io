@@ -122,12 +122,12 @@ Robots.prototype.operations.goStraight=function(robot,distance){
  distance=.5;
  robot.position.x+=distance*Math.cos(robot.rotation.z);
  robot.position.y+=distance*Math.sin(robot.rotation.z);
- robot.robot.llanta1.rotation.x=Math.PI/2;
- robot.robot.llanta2.rotation.x=Math.PI/2;
- robot.robot.llanta3.rotation.x=Math.PI/2;
- robot.robot.llanta4.rotation.x=Math.PI/2;
- robot.robot.llanta5.rotation.x=Math.PI/2;
- robot.robot.llanta6.rotation.x=Math.PI/2;
+ robot.actuator.llanta1.rotation.x=Math.PI/2;
+ robot.actuator.llanta2.rotation.x=Math.PI/2;
+ robot.actuator.llanta3.rotation.x=Math.PI/2;
+ robot.actuator.llanta4.rotation.x=Math.PI/2;
+ robot.actuator.llanta5.rotation.x=Math.PI/2;
+ robot.actuator.llanta6.rotation.x=Math.PI/2;
  idRobot=robot;
  //robot.spotLight.position.set(robot.position.x,robot.position.y,robot.position.z+5);
 };
