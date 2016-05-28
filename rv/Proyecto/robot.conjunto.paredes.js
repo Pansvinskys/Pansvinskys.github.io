@@ -95,7 +95,7 @@ function onKeyUp ( event ) {
 
 function loop(){
  if(boton==true){
-	camara=new THREE.OrthographicCamera( 50/ - 2, 150 / 2, 500 / 2, 50 / - 2, 5, 200 );
+	camara=new THREE.OrthographicCamera( 50/ - 2, 150 / 2, 250 / 2, 50 / - 2, 5, 200 );
 	camara.position.z=150;
 }
 else{
