@@ -2,7 +2,7 @@ function Llanta(angx,angy,angz){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin='';
  var textura  =THREE.ImageUtils.loadTexture('https://pansvinskys.github.io/rv/8712596-tire-texture-Stock-Photo-texture-truck-tires.jpg?raw=true');
- this.llanta=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshLambertMaterial({color:0x3f3f3f,map:textura}));
+ this.llanta=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1),new THREE.MeshBasicMaterial({color:0x3f3f3f,map:textura}));
  var rotx=new THREE.Matrix4().makeRotationX(angx);
  var roty=new THREE.Matrix4().makeRotationY(angy);
  var rotz=new THREE.Matrix4().makeRotationZ(angz);
@@ -122,12 +122,12 @@ Robots.prototype.operations.goStraight=function(robot,distance){
  distance=.5;
  robot.position.x+=distance*Math.cos(robot.rotation.z);
  robot.position.y+=distance*Math.sin(robot.rotation.z);
- robot.actuator.llanta1.rotation.y+=.1;
- robot.actuator.llanta2.rotation.y+=.1;
- robot.actuator.llanta3.rotation.y+=.1;
- robot.actuator.llanta4.rotation.y+=.1;
- robot.actuator.llanta5.rotation.y+=.1;
- robot.actuator.llanta6.rotation.y+=.1;
+ robot.actuator.llanta1.rotation.z+=.1;
+ robot.actuator.llanta2.rotation.z+=.1;
+ robot.actuator.llanta3.rotation.z+=.1;
+ robot.actuator.llanta4.rotation.z+=.1;
+ robot.actuator.llanta5.rotation.z+=.1;
+ robot.actuator.llanta6.rotation.z+=.1;
  idRobot=robot;
  //robot.spotLight.position.set(robot.position.x,robot.position.y,robot.position.z+5);
 };
