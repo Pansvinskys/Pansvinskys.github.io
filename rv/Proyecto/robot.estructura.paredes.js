@@ -88,14 +88,12 @@ var obstaculo3= this.sensor3.intersectObjects(environment.children,true);
 if((obstaculo.length>0 && (obstaculo[0].distance<=3)))
 {
 this.sensor.colision=true;
-obstaculo[0].object.material=new THREE.MeshBasicMaterial();
 }
 else
 this.sensor.colision=false;
 if((obstaculo2.length>0 && (obstaculo2[0].distance>=5)))
 {
 this.sensor2.colision=true;
-obstaculo2[0].object.material=new THREE.MeshBasicMaterial();
 }
 else
 this.sensor2.colision=false;
@@ -103,10 +101,21 @@ this.sensor2.colision=false;
 
 Robots.prototype.plan=function (environment){
 this.actuator.commands=[];
-if (this.sensor.colision==true)
-this.actuator.commands.push('rotateCCW');
-else
-this.actuator.commands.push('goStraight');
+if(pC==false){
+ if (this.sensor.colision==true)
+ this.actuator.commands.push('rotateCCW');
+ pC=true;
+ else
+ this.actuator.commands.push('goStraight');
+ }
+ else
+ {
+  if (this.sensor2.colision==true)
+ this.actuator.commands.push('rotateCCW');
+ pC=true;
+ else
+ this.actuator.commands.push('goStraight');
+ }
 };
 
 Robots.prototype.act=function (environment){
