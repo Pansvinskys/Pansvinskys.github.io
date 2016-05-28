@@ -96,8 +96,7 @@ function onKeyUp ( event ) {
 function loop(){
  if(boton==true){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 50 / 2, 50 / 2, 50 / - 2, 5, 200 );
-	camara.position.position.z=150;
-	camara.lookAt(new THREE.Vector3(2000,0,0));
+	camara.position.z=150;
 }
 else{
 	camara=new THREE.PerspectiveCamera;
