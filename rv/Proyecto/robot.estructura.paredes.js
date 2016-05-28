@@ -122,7 +122,6 @@ Robots.prototype.operations.goStraight=function(robot,distance){
  distance=.5;
  robot.position.x+=distance*Math.cos(robot.rotation.z);
  robot.position.y+=distance*Math.sin(robot.rotation.z);
- robot.rotation.z+=angle;
  robot.llanta1.rotation.x=Math.PI/2;
  robot.llanta2.rotation.x=Math.PI/2;
  robot.llanta3.rotation.x=Math.PI/2;
@@ -136,6 +135,7 @@ Robots.prototype.operations.goStraight=function(robot,distance){
 Robots.prototype.operations.rotateCW=function(robot,angle){
  if(angle===undefined)
  angle=Math.PI/2;
+ robot.rotation.z+=angle;
 };
 
 Robots.prototype.operations.rotateCCW=function(robot,angle){
