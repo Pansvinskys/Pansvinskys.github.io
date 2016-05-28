@@ -82,13 +82,14 @@ function onKeyUp ( event ) {
 function loop(){
  if(boton==true){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 50 / 2, 50 / 2, 50 / - 2, 10, 100 );
+	camara.position.set(idRobot.position.x+5,idRobot.position.y,idRobot.position.z);
 	camara.rotation.x=Math.PI/2;
 	camara.lookAt(idRobot);
 }
 else{
 	camara=new THREE.PerspectiveCamera;
+	 camara.position.set(idRobot.position.x,idRobot.position.y,idRobot.position.z+20);
 }
- camara.position.set(idRobot.position.x,idRobot.position.y,idRobot.position.z+20);
  requestAnimationFrame(loop);
  environment.sense();
  environment.plan();
