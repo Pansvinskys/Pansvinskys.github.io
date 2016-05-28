@@ -18,6 +18,8 @@ function Goal(size,x,y){
  this.position.y=y;
 }
 
+Goal.prototype=new THREE.Mesh();
+
 Environment.prototype.setMap=function(map){
  //var _offset=Math.floor(map.length/2);
  for(var i=0;i<map.length;i++)
