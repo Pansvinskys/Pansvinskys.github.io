@@ -82,6 +82,7 @@ function onKeyUp ( event ) {
 function loop(){
  if(boton==true){
 	camara=new THREE.OrthographicCamera( 50/ - 2, 50 / 2, 50 / 2, 50 / - 2, 10, 100 );
+	camara.rotation.y=Math.PI/2;
 	camara.lookAt(idRobot);
 }
 else{
