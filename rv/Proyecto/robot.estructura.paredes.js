@@ -125,8 +125,6 @@ if((obstaculo.length>0 && (obstaculo[0].distance>=3)))
 {
 if(obstaculo[0].object.name=="goal"){
 this.ga=true;
- var a = "enfrente";
- setTimeout(alert("meta " + a), 3000);
  }
 }
 
@@ -155,8 +153,6 @@ if(this.g==false)
        else{
        this.actuator.commands.push('rotateCW');
        this.sC=true;
-       var a = "world";
-       setTimeout(alert("Hello " + a), 3000);
        }
       }
     else{
