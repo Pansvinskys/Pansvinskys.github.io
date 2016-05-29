@@ -138,7 +138,7 @@ if(this.g==false)
 {
  if(this.ga==false&&this.gi==false)
  {
-   if(pC==false){
+   if(this.pC==false){
     if (this.sensor.colision==true){
     this.actuator.commands.push('rotateCCW');
     this.pC=true;}
@@ -168,9 +168,9 @@ if(this.g==false)
     }
    } 
  else{
-  if(ga==true)
+  if(this.ga==true)
   this.actuator.commands.push('goStraight');
-  if(gi==true&&ga==false){
+  if(this.gi==true&&this.ga==false){
   this.actuator.commands.push('rotateCCW'); 
   }
  }
