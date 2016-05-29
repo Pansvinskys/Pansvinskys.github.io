@@ -76,6 +76,11 @@ idRobot=this.actuator;
 this.actuator.rotation.x=Math.PI/2;
 this.actuator.commands=[];
 this.add(this.actuator);
+this.ga=false;
+this.gi=false;
+this.sC=false;
+this.pC=false;
+this.g=false;
 }
 Robots.prototype=new Agent();
 
@@ -91,14 +96,14 @@ if((obstaculo.length>0 && (obstaculo[0].distance<=3)))
 {
 this.sensor.colision=true;
 if(obstaculo[0].object.name=="goal")
-g=true;
+this.g=true;
 }
 else
 this.sensor.colision=false;
 if((obstaculo3.length>0 && (obstaculo3[0].distance<=3)))
 {
 if(obstaculo3[0].object.name=="goal")
-g=true;
+this.g=true;
 }
 
 
@@ -114,12 +119,12 @@ this.sensor2.colision=false;
 if((obstaculo3.length>0 && (obstaculo3[0].distance>=5)))
 {
 if(obstaculo3[0].object.name=="goal")
-gi=true;
+this.gi=true;
 }
 if((obstaculo.length>0 && (obstaculo[0].distance>=3)))
 {
 if(obstaculo[0].object.name=="goal"){
-ga=true;
+this.ga=true;
  var a = "enfrente";
  setTimeout(alert("meta " + a), 3000);
  }
@@ -129,34 +134,34 @@ ga=true;
 
 Robots.prototype.plan=function (environment){
 this.actuator.commands=[];
-if(g==false)
+if(this.g==false)
 {
- if(ga==false&&gi==false)
+ if(this.ga==false&&this.gi==false)
  {
    if(pC==false){
     if (this.sensor.colision==true){
     this.actuator.commands.push('rotateCCW');
-    pC=true;}
+    this.pC=true;}
     else
     this.actuator.commands.push('goStraight');
     }
     else
     {
-    if(sC==false){
+    if(this.sC==false){
        if (this.sensor.colision==true)
        this.actuator.commands.push('rotateCCW');
        else if (this.sensor.colision==false&&this.sensor2.colision==false)
        this.actuator.commands.push('goStraight');
        else{
        this.actuator.commands.push('rotateCW');
-       sC=true;
+       this.sC=true;
        var a = "world";
        setTimeout(alert("Hello " + a), 3000);
        }
       }
     else{
       if(this.sensor2.colision==false)
-      sC=false;
+      this.sC=false;
       else
       this.actuator.commands.push('goStraight');
      }
