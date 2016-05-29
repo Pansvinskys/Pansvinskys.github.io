@@ -116,7 +116,7 @@ if((obstaculo3.length>0 && (obstaculo3[0].distance>=5)))
 if(obstaculo3[0].object.name=="goal")
 gi=true;
 }
-if((obstaculo.length>0 && (obstaculo[0].distance>=5)))
+if((obstaculo.length>0 && (obstaculo[0].distance>=3)))
 {
 if(obstaculo3[0].object.name=="goal")
 ga=true;
