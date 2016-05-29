@@ -73,6 +73,9 @@ function setup(){
  k=0;
  pC=false;
  sC=false;
+ g=false;
+ gi=false;
+ ga=false;
 }
 
 function onKeyDown ( event ) {
@@ -112,6 +115,6 @@ else{
  renderer.render(environment,camara);
 }
 
-var clock,environment,camara,renderer,idRobot,boton,k,pC,sC;
+var clock,environment,camara,renderer,idRobot,boton,k,pC,sC,g,gi,ga;
 setup();
 loop();
