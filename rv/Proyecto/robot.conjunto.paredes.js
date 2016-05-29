@@ -45,7 +45,7 @@ function setup(){
  mapa[4] ="x                      x";
  mapa[5] ="x                      x";
  mapa[6] ="x                      x"; 
- mapa[7] ="x                      x";
+ mapa[7] ="x                  g   x";
  mapa[8] ="xxx   xxxxxxxxxxxxxxxxxx";
  mapa[9] ="x                      x";
  mapa[10]="x                      x"; 
@@ -53,7 +53,7 @@ function setup(){
  mapa[12]="xxxxxxxxxxxxxxxxx  xxxxx";
  mapa[13]="x                      x";
  mapa[14]="x                      x";
- mapa[15]="x        g             x";
+ mapa[15]="x                      x";
  mapa[16]="x                      x";
  mapa[17]="x                      x";
  mapa[18]="x                      x";
