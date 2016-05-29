@@ -118,8 +118,12 @@ gi=true;
 }
 if((obstaculo.length>0 && (obstaculo[0].distance>=3)))
 {
-if(obstaculo3[0].object.name=="goal")
+if(obstaculo3[0].object.name=="goal"){
 ga=true;
+ var a = "enfrente";
+ setTimeout(alert("meta " + a), 3000);
+ }
+}
 }
 
 };
