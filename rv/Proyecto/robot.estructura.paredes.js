@@ -80,8 +80,8 @@ Robots.prototype=new Agent();
 
 Robots.prototype.sense= function(environment){
 this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
-this.sensor2.set(new THREE.Vector3(this.position.x+3*Math.cos(this.rotation.z-Math.PI),this.position.y,this.position.z),new THREE.Vector3(Math.cos(this.rotation.z-Math.PI/2),Math.sin(this.rotation.z-Math.PI/2),0));
-this.sensor3.set(new THREE.Vector3(this.position.x-3*Math.cos(this.rotation.z-Math.PI),this.position.y,this.position.z),new THREE.Vector3(Math.cos(this.rotation.z-Math.PI/2),Math.sin(this.rotation.z-Math.PI/2),0));
+this.sensor2.set(new THREE.Vector3(this.position.x+2*Math.cos(this.rotation.z-Math.PI),this.position.y,this.position.z),new THREE.Vector3(Math.cos(this.rotation.z-Math.PI/2),Math.sin(this.rotation.z-Math.PI/2),0));
+this.sensor3.set(new THREE.Vector3(this.position.x-2*Math.cos(this.rotation.z-Math.PI),this.position.y,this.position.z),new THREE.Vector3(Math.cos(this.rotation.z-Math.PI/2),Math.sin(this.rotation.z-Math.PI/2),0));
 var obstaculo= this.sensor.intersectObjects(environment.children,true);
 var obstaculo2= this.sensor2.intersectObjects(environment.children,true);
 var obstaculo3= this.sensor3.intersectObjects(environment.children,true);
