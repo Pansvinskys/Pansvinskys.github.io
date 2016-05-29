@@ -16,6 +16,7 @@ function Goal(size,x,y){
  this.size=size;
  this.position.x=x;
  this.position.y=y;
+ this.name="goal";
 }
 
 Goal.prototype=new THREE.Mesh();
