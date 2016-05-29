@@ -129,7 +129,7 @@ if(pC==false){
     }
    }
  else{
-   if(this.sensor3.colision==false)
+   if(this.sensor2.colision==false)
    sC=false;
    else
    this.actuator.commands.push('goStraight');
