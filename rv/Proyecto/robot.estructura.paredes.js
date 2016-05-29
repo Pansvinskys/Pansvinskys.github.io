@@ -81,60 +81,91 @@ Robots.prototype=new Agent();
 Robots.prototype.sense= function(environment){
 this.sensor.set(this.position,new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
 this.sensor2.set(new THREE.Vector3(this.position.x+3*Math.cos(this.rotation.z-Math.PI),this.position.y+2*Math.sin(this.rotation.z-Math.PI),this.position.z),new THREE.Vector3(Math.cos(this.rotation.z-Math.PI/2),Math.sin(this.rotation.z-Math.PI/2),0));
-this.sensor3.set(new THREE.Vector3(this.position.x-3.5*Math.cos(this.rotation.z-Math.PI),this.position.y,this.position.z),new THREE.Vector3(Math.cos(this.rotation.z-Math.PI/2),Math.sin(this.rotation.z-Math.PI/2),0));
+this.sensor3.set(new THREE.Vector3(this.position.x,this.position.y,this.position.z),new THREE.Vector3(Math.cos(this.rotation.z+Math.PI/2),Math.sin(this.rotation.z+Math.PI/2),0));
+this.sensor4.set(new THREE.Vector3(this.position.x,this.position.y,this.position.z),new THREE.Vector3(Math.cos(this.rotation.z+Math.PI),Math.sin(this.rotation.z+Math.PI),0));
 var obstaculo= this.sensor.intersectObjects(environment.children,true);
 var obstaculo2= this.sensor2.intersectObjects(environment.children,true);
 var obstaculo3= this.sensor3.intersectObjects(environment.children,true);
 if((obstaculo.length>0 && (obstaculo[0].distance<=3)))
 {
 this.sensor.colision=true;
+if(obstaculo[0].object.name=="goal")
+g=true;
 }
 else
 this.sensor.colision=false;
+if((obstaculo3.length>0 && (obstaculo3[0].distance<=3)))
+{
+if(obstaculo3[0].object.name=="goal")
+g=true;
+}
+
+
+
 if((obstaculo2.length>0 && (obstaculo2[0].distance>=5)))
 {
 this.sensor2.colision=true;
 }
 else
 this.sensor2.colision=false;
+
+
 if((obstaculo3.length>0 && (obstaculo3[0].distance>=5)))
 {
-this.sensor3.colision=true;
+if(obstaculo3[0].object.name=="goal")
+gi=true;
 }
-else
-this.sensor3.colision=false;
+if((obstaculo.length>0 && (obstaculo[0].distance>=5)))
+{
+if(obstaculo3[0].object.name=="goal")
+ga=true;
+}
+
 };
 
 Robots.prototype.plan=function (environment){
 this.actuator.commands=[];
-if(pC==false){
- if (this.sensor.colision==true){
- this.actuator.commands.push('rotateCCW');
- pC=true;}
- else
- this.actuator.commands.push('goStraight');
- }
- else
+if(g==false)
+{
+ if(ga==false&&gi==false)
  {
- if(sC==false){
-    if (this.sensor.colision==true)
+   if(pC==false){
+    if (this.sensor.colision==true){
     this.actuator.commands.push('rotateCCW');
-    else if (this.sensor.colision==false&&this.sensor2.colision==false)
+    pC=true;}
+    else
     this.actuator.commands.push('goStraight');
-    else{
-    this.actuator.commands.push('rotateCW');
-    sC=true;
-    var a = "world";
-    setTimeout(alert("Hello " + a), 3000);
     }
-   }
+    else
+    {
+    if(sC==false){
+       if (this.sensor.colision==true)
+       this.actuator.commands.push('rotateCCW');
+       else if (this.sensor.colision==false&&this.sensor2.colision==false)
+       this.actuator.commands.push('goStraight');
+       else{
+       this.actuator.commands.push('rotateCW');
+       sC=true;
+       var a = "world";
+       setTimeout(alert("Hello " + a), 3000);
+       }
+      }
+    else{
+      if(this.sensor2.colision==false)
+      sC=false;
+      else
+      this.actuator.commands.push('goStraight');
+     }
+    }
+   } 
  else{
-   if(this.sensor2.colision==false)
-   sC=false;
-   else
-   this.actuator.commands.push('goStraight');
+  if(ga==true)
+  this.actuator.commands.push('goStraight');
+  if(gi==true&&ga==false){
+  this.actuator.commands.push('rotateCCW'); 
   }
  }
+}
 };
 
 Robots.prototype.act=function (environment){
