@@ -124,7 +124,6 @@ ga=true;
  setTimeout(alert("meta " + a), 3000);
  }
 }
-}
 
 };
 
